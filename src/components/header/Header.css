@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    background-color: #27002B;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.img-logo-header {
+    width: 200px;
+    margin-left: 2em;
+}
+
+.img-logo-header img {
+    width: 100%;
+}
+
+.nav-link-header {
+    display: flex;
+    gap: 4em;
+    margin-right: 2em;
+}
+
+.link-header {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.link-header:hover {
+    color: #EDDC11;
+}

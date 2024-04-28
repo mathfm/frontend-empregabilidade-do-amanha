@@ -1,0 +1,52 @@
+.home-page {
+    background-image: url("/src/assets/background-2.png");
+    width: 100%;
+    height: 91vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+.text-container {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 500px;
+    height: 800px;
+}
+
+.text-paragraph {
+    width: 400px;
+}
+
+.text-paragraph span {
+    color: #EDDC11;
+}
+
+.container-btn-home {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.link-home {
+    padding: 0.2em 1em;
+    color: #FFF;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 14px;
+    background-color: #d6c610;
+    font-size: 20px;
+}
+
+.login {
+    background-color: #27002B;
+}
