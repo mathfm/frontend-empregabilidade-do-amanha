@@ -46,7 +46,7 @@ export default function Register() {
                     </div>
 
                     <div className="btn-container">
-                        <button className="btn-forms cancel">Cancelar</button>
+                        <button type="button" className="btn-forms cancel">Cancelar</button>
                         <button type="submit" className="btn-forms submit">Registrar</button>
                     </div>
                 </form>
