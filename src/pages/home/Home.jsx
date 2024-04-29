@@ -1,16 +1,16 @@
-import "./Home.css";
+import styles from "./Home.module.css";
 export const Home = () => {
     return (
-      <section className="home-page">
-        <div className="text-container">
+      <section className={styles["home-page"]}>
+        <div className={styles["text-container"]}>
           <h1>Empregabilidade do Amanhã</h1>
-          <p className="text-paragraph">
+          <p className={styles["text-paragraph"]}>
             <span>&lt;/</span> Uma plataforma feita para mostrar o que os alunos fizeram ao
             longo do curso <span>&gt;</span>
           </p>
-          <div className="container-btn-home">
-            <a href="#" className="link-home">Saiba mais</a>
-            <a href="#" className="link-home login">Fazer login</a>
+          <div className={styles["container-btn-home"]}>
+            <a href="#" className={`${styles["link-home"]} ${styles["login"]}`}>Fazer login</a>
+            <a href="#" className={styles["link-home"]}>Saiba mais</a>
           </div>
         </div>
       </section>

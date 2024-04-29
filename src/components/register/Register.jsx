@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import "./Register.css";
+import styles from "./Register.module.css";
 export default function Register() {
 
     const { register, handleSubmit } = useForm();
@@ -9,45 +9,45 @@ export default function Register() {
     }
 
     return (
-        <section className="container">
-            <section className="register-container">
-                <form action="" method="post" className="forms" onSubmit={handleSubmit(createUser)}>
-                    <div className="forms-container">
-                        <label className="label-forms">Nome:</label>
-                        <input className="input-geral" type="text" {...register("name")} />
+        <section className={styles["container"]}>
+            <section className={styles["register-container"]}>
+                <form action="" method="post" className={styles["forms"]} onSubmit={handleSubmit(createUser)}>
+                    <div className={styles["forms-container"]}>
+                        <label className={styles["label-forms"]}>Nome:</label>
+                        <input className={styles["input-geral"]} type="text" {...register("name")} />
                     </div>
-                    <div className="forms-container">
-                        <label className="label-forms">Email:</label>
-                        <input className="input-geral" type="email" {...register("email")}/>
+                    <div className={styles["forms-container"]}>
+                        <label className={styles["label-forms"]}>Email:</label>
+                        <input className={styles["input-geral"]} type="email" {...register("email")}/>
                     </div>
-                    <div className="forms-container">
-                        <label className="label-forms">Senha:</label>
-                        <input className="input-geral" type="password" {...register("password")}/>
-                    </div>
-
-                    <div className="info-external">
-                        <div className="forms-container">
-                            <label className="label-forms">Github:</label>
-                            <input className="input-short" type="text" {...register("github")}/>
-                        </div>
-                        <div className="forms-container">
-                            <label className="label-forms">Linkedin:</label>
-                            <input className="input-short" type="text" {...register("linkedin")}/>
-                        </div>
-                        <div className="forms-container">
-                            <label className="label-forms">Whatsapp:</label>
-                            <input className="input-short" type="text" {...register("whatsapp")}/>
-                        </div>
+                    <div className={styles["forms-container"]}>
+                        <label className={styles["label-forms"]}>Senha:</label>
+                        <input className={styles["input-geral"]} type="password" {...register("password")}/>
                     </div>
 
-                    <div className="forms-container">
-                        <label className="label-forms">Descrição:</label>
-                        <textarea  className="text-description" cols="30" rows="10" {...register("description")}></textarea>
+                    <div className={styles["info-external"]}>
+                        <div className={styles["forms-container"]}>
+                            <label className={styles["label-forms"]}>Github:</label>
+                            <input className={styles["input-short"]} type="text" {...register("github")}/>
+                        </div>
+                        <div className={styles["forms-container"]}>
+                            <label className={styles["label-forms"]}>Linkedin:</label>
+                            <input className={styles["input-short"]} type="text" {...register("linkedin")}/>
+                        </div>
+                        <div className={styles["forms-container"]}>
+                            <label className={styles["label-forms"]}>Whatsapp:</label>
+                            <input className={styles["input-short"]} type="text" {...register("whatsapp")}/>
+                        </div>
                     </div>
 
-                    <div className="btn-container">
-                        <button type="button" className="btn-forms cancel">Cancelar</button>
-                        <button type="submit" className="btn-forms submit">Registrar</button>
+                    <div className={styles["forms-container"]}>
+                        <label className={styles["label-forms"]}>Descrição:</label>
+                        <textarea  className={styles["text-description"]} cols="30" rows="10" {...register("description")}></textarea>
+                    </div>
+
+                    <div className={styles["btn-container"]}>
+                        <button type="button" className={`${styles["btn-forms"]} ${styles["cancel"]}`}>Voltar</button>
+                        <button type="submit" className={`${styles["btn-forms"]} ${styles["submit"]}`}>Registrar</button>
                     </div>
                 </form>
             </section>
