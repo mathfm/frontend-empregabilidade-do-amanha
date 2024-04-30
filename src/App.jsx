@@ -4,8 +4,6 @@ import { Header } from './components/header/Header'
 import ProfileStudent from './pages/pageStudent/ProfileStudent'
 
 
-
-
 function App() {
   return (
     <>
