@@ -1,18 +1,10 @@
-.container {
-    width: 100%;
-    height: 91vh;
+.register-container {
+    background-color: #4E2050;
+    width: 600px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.register-container {
-    background-color: #4E2050;
-    width: 700px;
-    height: 760px;
-    display: flex;
-    justify-content: center;
-    align-items: start;
     padding: 1em;
     border-radius: 6px;
 }
@@ -88,4 +80,10 @@
 .btn-container {
     display: flex;
     gap: 1em;
+}
+
+.link {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 600;
 }

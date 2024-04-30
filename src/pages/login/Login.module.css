@@ -1,11 +1,3 @@
-.container {
-    width: 100%;
-    height: 91vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .login-container {
     background-color: #4E2050;
     width: 700px;
@@ -15,6 +7,8 @@
     align-items: center;
     padding: 1em;
     border-radius: 6px;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .forms {
@@ -64,4 +58,13 @@
 .btn-container {
     display: flex;
     gap: 1em;
+}
+
+.msg-login {
+    color: #ffffff;
+}
+
+.link {
+    text-decoration: none;
+    color: #EDDC11;
 }

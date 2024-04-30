@@ -1,17 +1,30 @@
-import './App.css'
-import { Footer } from './components/footer/Footer'
-import { Header } from './components/header/Header'
-import ProfileStudent from './pages/pageStudent/ProfileStudent'
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { Footer } from "./components/footer/Footer";
+import { Header } from "./components/header/Header";
+import { Home } from "./pages/home/Home";
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
+import { Container } from "./components/container/Container";
+import CollaboratorRegister from "./pages/collaborator-register/CollaboratorRegister";
 
 function App() {
   return (
     <>
-      <Header />
-      <ProfileStudent />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Container>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/register-student" element={<Register />} />
+            <Route path="/register-collaborator" element={<CollaboratorRegister />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </Container>
+        <Footer />
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

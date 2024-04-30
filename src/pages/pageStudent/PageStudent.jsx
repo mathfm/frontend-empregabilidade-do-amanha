@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import CardProfile from "../../components/card-profile/CardProfile";
 import PerfilStudent from "../../components/profile-student/PerfilStudent";
-
-import styles from "./ProfileStudent.module.css";
+import axios from "axios"
+import styles from "./PageStudent.module.css";
 export default function ProfileStudent() {
   const [repository, setRepository] = useState([]);
   useEffect(() => {
     async function loadRepositories() {
-      const response = await fetch(
+      const response = await axios.get(
         "https://api.github.com/users/mathfm/repos?sort=created&direction=desc"
       );
-      const data = await response.json();
+      const data = await response.data;
       console.log(data);
       setRepository(data);
     }
@@ -37,7 +37,7 @@ export default function ProfileStudent() {
               />
             ))
         ) : (
-          <p>....</p>
+          <p>Carregando....</p>
         )}
       </div>
     </section>

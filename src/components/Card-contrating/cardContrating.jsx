@@ -20,3 +20,4 @@ export default function Card({ src, name_contrating, email_contrating }) {
 
     )
 }
+
