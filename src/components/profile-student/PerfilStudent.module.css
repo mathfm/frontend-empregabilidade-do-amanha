@@ -8,13 +8,13 @@
 }
 
 .profile-card {
-    color: white;
+    color: var(--white);
     padding: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #4E2050;
+    background-color: var(--secundary);
     width: 440px;
     height: 690px;
     border-radius: 10px;
@@ -29,7 +29,7 @@
 }
 
 .icon {
-    color: #EDDC11;
+    color: var(--secundary-y);
     font-size: 3em;
 }
 
@@ -41,7 +41,7 @@
 
 .text-link {
     text-decoration: none;
-    color: #FFF;
+    color: var(--white);
 }
 
 .link {

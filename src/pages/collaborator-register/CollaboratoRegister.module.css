@@ -1,5 +1,5 @@
 .register-container {
-    background-color: #4E2050;
+    background-color: var(--secundary);
     width: 600px;
     height: 500px;
     display: flex;
@@ -23,7 +23,7 @@
 }
 
 .label-forms {
-    color: white;
+    color: var(--white);
 }
 
 .input-geral {
@@ -68,13 +68,13 @@
 }
 
 .submit {
-    background-color: #EDDC11;
-    color: #000000;
+    background-color: var(--secundary-y);
+    color: var(--secundary-p);
 }
 
 .cancel {
     background-color: #ED1111;
-    color: white;
+    color: var(--white);
 }
 
 .btn-container {
@@ -84,6 +84,6 @@
 
 .link {
     text-decoration: none;
-    color: #FFF;
+    color: var(--white);
     font-weight: 600;
 }

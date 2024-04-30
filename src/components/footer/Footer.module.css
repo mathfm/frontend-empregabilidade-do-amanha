@@ -1,16 +1,21 @@
 .footer {
-    background-color: #27002B;
-    color: white;
+    background-color: var(--secundary-p);
+    margin-top: -50px;
+    color: var(--white);
     display: flex;   
-    height: 120px;
+    height: 180px;
     justify-content: space-around;
     align-items: center;
     padding: 1em;
 }
 
 .icon-footer {
-    color: #EDDC11;
+    color: var(--secundary-y);
     font-size: 2.5em;
+}
+
+.icon-footer:hover {
+    color: var(--white);
 }
 
 .img-footer {
@@ -34,12 +39,12 @@
 }
 
 .text-group-info h3 {
-    color: #EDDC11;
+    color: var(--secundary-y);
 }
 
 .text-group-info a {
     text-decoration: none;
-    color: #FFF;
+    color: var(--white);
     
 }
 

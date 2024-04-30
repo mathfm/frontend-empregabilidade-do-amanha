@@ -30,12 +30,12 @@ input {
     border-radius: 12px;
     outline: none;
     font-size: 16px;
-    color: black;
+    color: var(--secundary-p);
 }
 
 #btn-delete {
     background: #ED1111;
-    color: #FFFFFF;
+    color: var(--white);
     margin-left: 500px;
     margin-top: 50px;
 }

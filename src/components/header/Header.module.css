@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    background-color: #27002B;
+    background-color: var(--primary);
     align-items: center;
     justify-content: space-between;
     height: 90px;
@@ -22,12 +22,12 @@
 }
 
 .link-header {
-    color: #FFFFFF;
+    color: var(--white);
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
 }
 
 .link-header:hover {
-    color: #EDDC11;
+    color: var(--secundary-y);
 }

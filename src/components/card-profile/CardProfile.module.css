@@ -4,8 +4,8 @@
     gap: 1em;
     width: 650px;
     height: 220px;
-    background-color: #4E2050;
-    color: white;
+    background-color: var(--secundary);
+    color: var(--white);
     padding: 1em;
     border-radius: 10px;
     justify-content: center;
@@ -20,7 +20,7 @@
 }
 
 .info-project a {
-    color: #FFF;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .link-project {
-    background-color: #27002B;
+    background-color: var(--primary);
     padding: 0.5em 1em;
     border-radius: 7px;
 }

@@ -1,5 +1,5 @@
 .login-container {
-    background-color: #4E2050;
+    background-color: var(--secundary);
     width: 700px;
     height: 400px;
     display: flex;
@@ -25,7 +25,7 @@
 }
 
 .label-forms {
-    color: white;
+    color: var(--white);
 }
 
 .input-geral {
@@ -46,13 +46,13 @@
 }
 
 .submit {
-    background-color: #EDDC11;
-    color: #000000;
+    background-color: var(--secundary-y);
+    color: var(--secundary-p);
 }
 
 .cancel {
     background-color: #ED1111;
-    color: white;
+    color: var(--white);
 }
 
 .btn-container {
@@ -61,10 +61,10 @@
 }
 
 .msg-login {
-    color: #ffffff;
+    color: var(--white);
 }
 
 .link {
     text-decoration: none;
-    color: #EDDC11;
+    color: var(--secundary-y);
 }

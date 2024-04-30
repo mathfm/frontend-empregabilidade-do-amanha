@@ -1,7 +1,7 @@
 .home-page {
     background-image: url("/src/assets/background-2.png");
     width: 100%;
-    height: 91vh;
+    height: 95vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -10,9 +10,8 @@
 }
 
 .text-container {
-    color: white;
+    color: var(--white);
     text-align: center;
-    font-size: 30px;
     font-weight: 500;
     display: flex;
     flex-direction: column;
@@ -21,14 +20,20 @@
     gap: 2em;
     width: 500px;
     height: 800px;
+    margin-top: -100px;
+}
+
+.text-container h1 {
+    font-size: 40px;
 }
 
 .text-paragraph {
-    width: 400px;
+    width: 650px;
+    font-size: 30px;
 }
 
 .text-paragraph span {
-    color: #EDDC11;
+    color: var(--secundary-y);
 }
 
 .container-btn-home {
@@ -39,14 +44,24 @@
 
 .link-home {
     padding: 0.2em 1em;
-    color: #FFF;
+    color: var(--secundary-p);
     font-weight: 600;
     text-decoration: none;
     border-radius: 14px;
-    background-color: #d6c610;
+    background-color: var(--secundary-y);
     font-size: 20px;
 }
 
+.link-home:hover {
+    color: var(--secundary-p);
+}
+
 .login {
-    background-color: #27002B;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.login:hover {
+    background-color: var(--secundary);
+    color: var(--white);
 }
