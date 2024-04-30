@@ -7,6 +7,7 @@ import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import { Container } from "./components/container/Container";
 import CollaboratorRegister from "./pages/collaborator-register/CollaboratorRegister";
+import PublishOpportunities from "./pages/publish-opportunities/PublishOpportunities";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/register-student" element={<Register />} />
             <Route path="/register-collaborator" element={<CollaboratorRegister />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/oportunitties" element={<PublishOpportunities />} />
           </Routes>
         </Container>
         <Footer />
