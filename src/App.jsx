@@ -1,7 +1,8 @@
 import './App.css'
 import { Footer } from './components/footer/Footer'
 import { Header } from './components/header/Header'
-import Register from './components/register/Register'
+import ProfileStudent from './pages/pageStudent/ProfileStudent'
+
 
 
 
@@ -9,7 +10,7 @@ function App() {
   return (
     <>
       <Header />
-      <Register />
+      <ProfileStudent />
       <Footer />
     </>
   )
