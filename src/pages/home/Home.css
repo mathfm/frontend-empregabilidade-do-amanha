@@ -1,0 +1,37 @@
+.home-section {
+    display: flex;
+    flex-direction: row-reverse; 
+    margin-top: -30px;
+    background-color: var(--secundary-p);
+  }
+
+
+h1, p {
+    color: var(--white);
+    text-align: center;
+}
+
+.home-button {
+    background-color: var(--secundary-y);
+    color: var(--secundary-p);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 68px; 
+    width: 220px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-button:hover {
+    background-color: var(--secundary);
+    color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
