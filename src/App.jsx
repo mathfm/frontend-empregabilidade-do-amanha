@@ -9,6 +9,7 @@ import { Container } from "./components/container/Container";
 import CollaboratorRegister from "./pages/collaborator-register/CollaboratorRegister";
 import PublishOpportunities from "./pages/publish-opportunities/PublishOpportunities";
 import StudentList from "./pages/student-list/StudentList";
+import ListVacancy from "./pages/list_vacancy";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/oportunitties" element={<PublishOpportunities />} />
             <Route path="/list-student" element={<StudentList />} />
+            <Route path="/list-vacancy" element={<ListVacancy />} />
           </Routes>
         </Container>
         <Footer />
