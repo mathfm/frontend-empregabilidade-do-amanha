@@ -1,0 +1,38 @@
+.card-page {
+    width: 100%;
+    min-height: 91vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background: #4E2050;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    gap: 3em;
+    flex-direction: column;
+}
+
+.description {
+    color: #FFFFFF;
+    width: 600px;
+}
+
+.button_acess {
+    width: 158px;
+    height: 27px;
+    border-radius: 14px;
+    gap: 10px;
+    background-color: #EDDC11;
+    border: none;
+    font-size: 17px;
+}
+
+.descrition_vacancy {
+    text-align: center;
+}
