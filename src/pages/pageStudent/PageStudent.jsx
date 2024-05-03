@@ -1,17 +1,26 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import CardProfile from "../../components/card-profile/CardProfile";
 import PerfilStudent from "../../components/profile-student/PerfilStudent";
 import axios from "axios"
 import styles from "./PageStudent.module.css";
+import { jwtDecode } from "jwt-decode";
+
 export default function ProfileStudent() {
   const [repository, setRepository] = useState([]);
+  const [user, setUser] = useState([]);
   useEffect(() => {
     async function loadRepositories() {
+      const decodeToken = jwtDecode(localStorage.getItem("token"));
+      const findUser = await axios.get(`http://localhost:3000/api/student/${decodeToken.id}`, {
+        headers: { 'Authorization': 'Bearer ' + localStorage.getItem("token") }
+      });
+      setUser(findUser.data);
+
       const response = await axios.get(
-        "https://api.github.com/users/mathfm/repos?sort=created&direction=desc"
+        `https://api.github.com/users/${findUser.data.github_url}/repos?sort=created&direction=desc`
       );
       const data = await response.data;
-      console.log(data);
+      console.log(findUser.data);
       setRepository(data);
     }
 
@@ -21,7 +30,15 @@ export default function ProfileStudent() {
     <section className={styles["container-page"]}>
       {
         repository.slice(0, 1).map((repo) => {
-          return <PerfilStudent key={repo.id} img={repo.owner.avatar_url} />;
+          return <PerfilStudent
+            key={repo.id}
+            img={repo.owner.avatar_url}
+            github_url={user.github_url}
+            linkedin_url={user.linkedin_url}
+            description={user.description}
+            email={user.email}
+            name={user.name} />;
+          
         })
       }
       <div className={styles["card"]}>

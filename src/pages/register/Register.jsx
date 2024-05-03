@@ -2,12 +2,19 @@ import { useForm } from "react-hook-form";
 import styles from "./Register.module.css";
 import { ContainerImg } from "../../components/container-img/ContainerImg";
 import { Link } from "react-router-dom";
+import axios from "axios";
 export default function Register() {
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
 
-    const createUser = (data) => {
-        console.log(data);
+    const createUser = async (data) => {
+        try {
+            await axios.post("http://localhost:3000/api/student/create", data);
+            reset();
+            window.location.href("/register-student")
+        } catch (error) {
+            console.log("Error ao registrar usuario: ", error);
+        }
     }
 
     return (
@@ -30,11 +37,11 @@ export default function Register() {
                     <div className={styles["info-external"]}>
                         <div className={styles["forms-container"]}>
                             <label className={styles["label-forms"]}>Github:</label>
-                            <input className={styles["input-short"]} type="text" {...register("github")} />
+                            <input className={styles["input-short"]} type="text" {...register("github_url")} />
                         </div>
                         <div className={styles["forms-container"]}>
                             <label className={styles["label-forms"]}>Linkedin:</label>
-                            <input className={styles["input-short"]} type="text" {...register("linkedin")} />
+                            <input className={styles["input-short"]} type="text" {...register("linkedin_url")} />
                         </div>
                         <div className={styles["forms-container"]}>
                             <label className={styles["label-forms"]}>Whatsapp:</label>

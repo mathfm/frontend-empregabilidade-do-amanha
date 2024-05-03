@@ -1,29 +1,37 @@
 import styles from "./PerfilStudent.module.css";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 import PropTypes from "prop-types";
-export default function PerfilStudent({img}) {
+export default function PerfilStudent({ img, linkedin_url, github_url, name, email, description }) {
   return (
     <section className={styles["profile-card"]}>
       <figure className={styles["image"]}>
         <img src={img} alt="" />
       </figure>
       <div className={styles["profile-info"]}>
-        <h3>Fernando Matheus M Dos Santos</h3>
-        <p>fernando@example123.com</p>
+        <h3>{name}</h3>
+        <p>{email}</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum deleniti
-          dolorem, a reiciendis sint neque, ad corporis vitae ea excepturi nemo.
-          Accusamus eveniet illum natus inventore sit tenetur itaque dolores.
+          {description}
         </p>
       </div>
 
       <div className={styles["group-icon"]}>
-        <a href="#" className={styles["link"]}>
+        <a
+          href={`https://github.com/${github_url}`}
+          className={styles["link"]}
+          target="_blank"
+          rel="nopenner norefferer"
+        >
           <FaGithub className={styles["icon"]} />
           <p className={styles["text-link"]}>Github</p>
         </a>
 
-        <a href="#" className={styles["link"]}>
+        <a
+          href={`https://www.linkedin.com/in/${linkedin_url}/`}
+          className={styles["link"]}
+          target="_blank"
+          rel="nopenner norefferer"
+        >
           <FaLinkedin className={styles["icon"]} />
           <p className={styles["text-link"]}>Linkedin</p>
         </a>
@@ -34,4 +42,9 @@ export default function PerfilStudent({img}) {
 
 PerfilStudent.propTypes = {
   img: PropTypes.string.isRequired,
+  linkedin_url: PropTypes.string.isRequired,
+  github_url: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };

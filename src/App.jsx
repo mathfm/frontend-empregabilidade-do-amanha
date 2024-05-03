@@ -9,26 +9,32 @@ import { Container } from "./components/container/Container";
 import CollaboratorRegister from "./pages/collaborator-register/CollaboratorRegister";
 import PublishOpportunities from "./pages/publish-opportunities/PublishOpportunities";
 import StudentList from "./pages/student-list/StudentList";
+import { AuthProvider } from "./hooks/AuthContext";
+import PageStudent from "./pages/pageStudent/PageStudent";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
-        <Container>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/register-student" element={<Register />} />
-            <Route path="/register-collaborator" element={<CollaboratorRegister />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/oportunitties" element={<PublishOpportunities />} />
-            <Route path="/list-student" element={<StudentList />} />
-          </Routes>
-        </Container>
-        <Footer />
+        <AuthProvider>
+          <Header />
+          <Container>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/register-student" element={<Register />} />
+              <Route path="/register-collaborator" element={<CollaboratorRegister />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/oportunitties" element={<PublishOpportunities />} />
+              <Route path="/list-student" element={<StudentList />} />
+              <Route path="/perfil-student" element={<PageStudent />} />
+
+            </Routes>
+          </Container>
+          <Footer />
+        </AuthProvider>
       </BrowserRouter>
     </>
-  );
+  )
 }
 
 export default App;
