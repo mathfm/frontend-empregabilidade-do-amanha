@@ -9,8 +9,9 @@ import { Container } from "./components/container/Container";
 import CollaboratorRegister from "./pages/collaborator-register/CollaboratorRegister";
 import PublishOpportunities from "./pages/publish-opportunities/PublishOpportunities";
 import StudentList from "./pages/student-list/StudentList";
-import { AuthProvider } from "./hooks/AuthContext";
+import { AuthProvider } from "./context/AuthContext";
 import PageStudent from "./pages/pageStudent/PageStudent";
+import StudentEditPerfil from "./pages/student-edit-perfil/StudentEditPerfil";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
               <Route path="/oportunitties" element={<PublishOpportunities />} />
               <Route path="/list-student" element={<StudentList />} />
               <Route path="/perfil-student" element={<PageStudent />} />
-
+              <Route path="/perfil-student-edit" element={<StudentEditPerfil />} />
             </Routes>
           </Container>
           <Footer />

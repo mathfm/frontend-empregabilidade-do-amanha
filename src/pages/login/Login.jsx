@@ -3,7 +3,7 @@ import styles from "./Login.module.css";
 import { ContainerImg } from "../../components/container-img/ContainerImg";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { AuthContext } from "../../hooks/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 
 export default function Login() {

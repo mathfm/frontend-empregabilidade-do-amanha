@@ -1,0 +1,16 @@
+.page-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.delete-btn {
+    width: 120px;
+    height: 30px;
+    border-radius: 14px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #ED1111;
+    color: var(--white);
+}

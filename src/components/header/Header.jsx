@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import { useContext } from "react";
-import { AuthContext } from "../../hooks/AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 export const Header = () => {
     const { isLoggedIn, logout } = useContext(AuthContext);
     return (
@@ -28,6 +28,9 @@ export const Header = () => {
                 )}
                 {isLoggedIn && (
                     <>
+                        <Link to={"/perfil-student-edit"} className={styles["link-header"]}>
+                            Editar Perfil
+                        </Link>
                         <Link to={"/perfil-student"} className={styles["link-header"]}>
                             Perfil
                         </Link>

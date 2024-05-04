@@ -10,9 +10,9 @@ export default function PerfilStudent({ img, linkedin_url, github_url, name, ema
       <div className={styles["profile-info"]}>
         <h3>{name}</h3>
         <p>{email}</p>
-        <p>
-          {description}
-        </p>
+          <p className={styles["description"]}>
+            {description}
+          </p>
       </div>
 
       <div className={styles["group-icon"]}>
