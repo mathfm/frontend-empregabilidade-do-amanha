@@ -17,12 +17,16 @@ export default function Register() {
         } catch (error) {
             console.log("Error ao registrar usuario: ", error);
         }
+  }
+  
+  const returnLink = () => {
+      window.location.replace("/");
     }
 
     return (
       <ContainerImg>
         <section className={styles["register-container"]}>
-          <FormsUser functionForms={createUser} methodForm="Criar Conta" />
+          <FormsUser functionForms={createUser} methodForm="Criar Conta" linkReturn={returnLink} />
           <Link to={"/register-collaborator"} className={styles["link"]}>
             Quer se registrar como colaborador?
           </Link>

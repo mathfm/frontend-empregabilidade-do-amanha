@@ -10,6 +10,9 @@ export default function EditFormsJob() {
         localStorage.removeItem("id_job");
         window.location.reload();
     }
-  return <FormsJob functionForms={updateLinkJob} methodForm="Atualizar" />;
+    const returnLink = () => {
+      window.location.replace("/perfil-collaborator");
+    }
+  return <FormsJob functionForms={updateLinkJob} methodForm="Atualizar" linkReturn={returnLink}/>;
 }
 

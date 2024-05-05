@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 export const Home = () => {
     return (
@@ -9,7 +10,7 @@ export const Home = () => {
             longo do curso <span>&gt;</span>
           </p>
           <div className={styles["container-btn-home"]}>
-            <a href="#" className={`${styles["link-home"]} ${styles["login"]}`}>Fazer login</a>
+            <Link to={"/login-student"} className={`${styles["link-home"]} ${styles["login"]}`}>Fazer login</Link>
             <a href="#" className={styles["link-home"]}>Saiba mais</a>
           </div>
         </div>

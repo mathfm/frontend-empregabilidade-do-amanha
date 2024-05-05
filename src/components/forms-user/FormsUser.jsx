@@ -2,17 +2,11 @@ import { useForm } from "react-hook-form";
 import styles from "./FormsUser.module.css";
 import PropTypes from "prop-types";
 
+export default function FormsUser({ functionForms, methodForm, linkReturn }) {
+  const { register, handleSubmit } = useForm();
 
-export default function FormsUser({functionForms, methodForm}) {
-    const { register, handleSubmit } = useForm();
-    
   return (
-    <form
-      action=""
-      method="post"
-      className={styles["forms"]}
-      onSubmit={handleSubmit(functionForms)}
-    >
+    <form className={styles["forms"]} onSubmit={handleSubmit(functionForms)}>
       <div className={styles["forms-container"]}>
         <label className={styles["label-forms"]}>Nome:</label>
         <input
@@ -43,7 +37,7 @@ export default function FormsUser({functionForms, methodForm}) {
         <div className={styles["forms-container"]}>
           <label className={styles["label-forms"]}>Github:</label>
           <input
-            className={styles["input-short"]}
+            className={styles["input-geral"]}
             type="text"
             {...register("github_url")}
           />
@@ -51,7 +45,7 @@ export default function FormsUser({functionForms, methodForm}) {
         <div className={styles["forms-container"]}>
           <label className={styles["label-forms"]}>Linkedin:</label>
           <input
-            className={styles["input-short"]}
+            className={styles["input-geral"]}
             type="text"
             {...register("linkedin_url")}
           />
@@ -60,7 +54,8 @@ export default function FormsUser({functionForms, methodForm}) {
 
       <div className={styles["forms-container"]}>
         <label className={styles["label-forms"]}>Descrição:</label>
-        <textarea maxLength={150}
+        <textarea
+          maxLength={150}
           className={styles["text-description"]}
           cols="30"
           rows="10"
@@ -72,6 +67,7 @@ export default function FormsUser({functionForms, methodForm}) {
         <button
           type="button"
           className={`${styles["btn-forms"]} ${styles["cancel"]}`}
+          onClick={linkReturn}
         >
           Voltar
         </button>
@@ -87,6 +83,7 @@ export default function FormsUser({functionForms, methodForm}) {
 }
 
 FormsUser.propTypes = {
-    functionForms: PropTypes.func.isRequired,
-    methodForm: PropTypes.string.isRequired
+  functionForms: PropTypes.func.isRequired,
+  methodForm: PropTypes.string.isRequired,
+  linkReturn: PropTypes.func.isRequired,
 };

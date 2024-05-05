@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 export default function RegisterCollaborator() {
     const { reset } = useForm();
 
+    const returnLink = () => {
+        window.location.replace("/");
+    }
+
     const createUser = async (data) => {
         try {
             await axios.post(
@@ -22,7 +26,7 @@ export default function RegisterCollaborator() {
     return (
         <ContainerImg>
             <section className={styles["page-edit"]}>
-                <FormsCollaborator functionForms={createUser} methodPost="Registrar" />
+                <FormsCollaborator functionForms={createUser} methodPost="Registrar" linkReturn={returnLink}/>
                 <Link to={"/register-student"} className={styles["link"]}>
                 Quer se registrar como um estudante?
                 </Link>

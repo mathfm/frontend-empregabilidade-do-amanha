@@ -15,9 +15,12 @@ export default function RegisterJob() {
       console.log("Error ao tentar registrar uma nova vaga");
     }
   }
+  const returnLink = () => {
+    window.location.replace("/perfil-collaborator");
+  }
   return (
     <div className={styles["page-register"]}>
-      <FormsJob functionForms={registerJob} methodForm="Registrar"/>
+      <FormsJob functionForms={registerJob} methodForm="Registrar" linkReturn={returnLink}/>
 
     </div>
   )

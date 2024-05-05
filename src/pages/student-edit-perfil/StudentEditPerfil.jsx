@@ -29,13 +29,17 @@ export default function StudentEditPerfil() {
       linkedin: data.linkedin_url || findUser.data.linkedin_url,
       description: data.description || findUser.data.description,
     };
-    console.log(formsUpdatedUser);
+
     await axios.put(`http://localhost:3000/api/student/update/${decodeToken.id}`, formsUpdatedUser);
   };
 
+  const returnLink = () => {
+    window.location.replace("/perfil-student");
+  }
+
   return (
     <section className={styles["page-edit"]}>
-      <FormsUser functionForms={updateUser} methodForm="Atualizar" />
+      <FormsUser functionForms={updateUser} methodForm="Atualizar" linkReturn={returnLink}/>
       <button onClick={deleteStudent} className={styles["delete-btn"]}>Deletar conta</button>
     </section>
   );

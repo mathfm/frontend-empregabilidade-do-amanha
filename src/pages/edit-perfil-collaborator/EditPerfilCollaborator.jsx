@@ -15,7 +15,10 @@ export default function EditPerfilCollaborator() {
             console.log("Erro ao tentar atualizar o colaborador: ", error);
         }
     }
+    const returnLink = () => {
+      window.location.replace("/perfil-collaborator");
+    }
   return (
-    <FormsCollaborator functionForms={updateCollaborator} methodPost="Atualizar"/>
+    <FormsCollaborator functionForms={updateCollaborator} methodPost="Atualizar" linkReturn={returnLink}/>
   )
 }
