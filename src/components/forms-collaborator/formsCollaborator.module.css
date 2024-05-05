@@ -1,14 +1,12 @@
-.login-container {
+.register-container {
     background-color: var(--secundary);
-    width: 700px;
+    width: 600px;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1em;
     border-radius: 6px;
-    flex-direction: column;
-    gap: 1em;
 }
 
 .forms {
@@ -35,6 +33,30 @@
     padding: 10px;
     border: none;
 }
+
+.info-external {
+    display: flex;
+    gap: 1em;
+}
+
+.input-short {
+    width: 150px;
+    height: 35px;
+    border-radius: 6px;
+    padding: 1em;
+    border: none;
+}
+
+
+.text-description {
+    width: 500px;
+    height: 150px;
+    font-size: 1em;
+    border-radius: 6px;
+    padding: 1em;
+    border: none;
+}
+
 .btn-forms {
     width: 110px;
     height: 30px;
@@ -60,11 +82,8 @@
     gap: 1em;
 }
 
-.msg-login {
-    color: var(--white);
-}
-
 .link {
     text-decoration: none;
-    color: var(--secundary-y);
+    color: var(--white);
+    font-weight: 600;
 }

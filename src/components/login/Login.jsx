@@ -1,44 +1,30 @@
-import { useForm } from "react-hook-form";
-import styles from "./Login.module.css";
-import { ContainerImg } from "../../components/container-img/ContainerImg";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import { AuthContext } from "../../context/AuthContext";
-import { useContext } from "react";
 
-export default function Login() {
+import { useForm } from 'react-hook-form';
+
+import styles from "./Login.module.css"
+import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
+import { ContainerImg } from "../container-img/ContainerImg";
+export default function Login({ typeLogin }) {
     const { register, handleSubmit } = useForm();
-    const { login } = useContext(AuthContext); // Adicione isLoggedIn ao useContext
-
-    const loginUser = async (data) => {
-        try {
-            const response = await axios.post(
-                "http://localhost:3000/api/login/student",
-                data
-            );
-            
-            const { token } = response.data;
-
-            // Efetuar o login apenas se o token estiver presente
-            if (token) {
-                login(token);
-                window.location.href = "/perfil-student";
-            }
-        } catch (error) {
-            return "Erro ao tentar fazer login"
-        }
-    };
-
+    const backhome = () => {
+        window.location.replace("/");
+    }
     return (
         <ContainerImg>
             <section className={styles["login-container"]}>
-                <form className={styles["forms"]} onSubmit={handleSubmit(loginUser)}>
+                <div className={styles["link-login-container"]}>
+                    <p>Fazer login como <Link to={"/login-student"} className={styles["link-login"]}>Estudante</Link> ou <Link to={"/login-collaborator"} className={styles["link-login"]}>Colaborador</Link></p>
+                </div>
+                <form className={styles["forms"]} onSubmit={handleSubmit(typeLogin)}>
                     <div className={styles["forms-container"]}>
                         <label className={styles["label-forms"]}>Email:</label>
                         <input
                             className={styles["input-geral"]}
                             type="email"
                             {...register("email")}
+                            required
+
                         />
                     </div>
                     <div className={styles["forms-container"]}>
@@ -47,12 +33,15 @@ export default function Login() {
                             className={styles["input-geral"]}
                             type="password"
                             {...register("password")}
+                            required
+                            min={8}
                         />
                     </div>
                     <div className={styles["btn-container"]}>
                         <button
                             type="button"
                             className={`${styles["btn-forms"]} ${styles["cancel"]}`}
+                            onClick={backhome}
                         >
                             Voltar
                         </button>
@@ -78,6 +67,11 @@ export default function Login() {
                     ?
                 </p>
             </section>
+
         </ContainerImg>
     );
 }
+
+Login.propTypes = {
+    typeLogin: PropTypes.func.isRequired,
+};

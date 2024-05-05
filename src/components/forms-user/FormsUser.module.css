@@ -23,20 +23,6 @@
     border: none;
 }
 
-.info-external {
-    display: flex;
-    gap: 1em;
-}
-
-.input-short {
-    width: 245px;
-    height: 35px;
-    border-radius: 6px;
-    padding: 1em;
-    border: none;
-}
-
-
 .text-description {
     width: 500px;
     height: 150px;
@@ -69,10 +55,4 @@
 .btn-container {
     display: flex;
     gap: 1em;
-}
-
-.link {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 600;
 }

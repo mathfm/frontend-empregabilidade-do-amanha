@@ -20,7 +20,6 @@ export default function ProfileStudent() {
         `https://api.github.com/users/${findUser.data.github_url}/repos?sort=created&direction=desc`
       );
       const data = await response.data;
-      console.log(findUser.data);
       setRepository(data);
     }
 

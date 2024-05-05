@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import propType from "prop-types";
+import { jwtDecode } from "jwt-decode";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -16,8 +17,9 @@ useEffect(() => {
 
 const login = (token) => {
     setIsLoggedIn(true);
-    console.log(localStorage.getItem("token"));
   localStorage.setItem("token", token);
+  const decodeToken = jwtDecode(token)
+  localStorage.setItem("type", decodeToken.type);
 };
 
 const logout = () => {

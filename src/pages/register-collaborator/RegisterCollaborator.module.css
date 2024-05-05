@@ -1,0 +1,11 @@
+.link {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.page-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

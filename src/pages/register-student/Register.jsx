@@ -13,7 +13,7 @@ export default function Register() {
         try {
             await axios.post("http://localhost:3000/api/student/create", data);
             reset();
-            window.location.replace("/login");
+            window.location.replace("/login-student");
         } catch (error) {
             console.log("Error ao registrar usuario: ", error);
         }
@@ -26,7 +26,7 @@ export default function Register() {
           <Link to={"/register-collaborator"} className={styles["link"]}>
             Quer se registrar como colaborador?
           </Link>
-          <Link to={"/login"} className={styles["link"]}>
+          <Link to={"/login-student"} className={styles["link"]}>
             Ja possui um login?
           </Link>
         </section>

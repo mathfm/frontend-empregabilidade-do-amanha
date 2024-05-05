@@ -35,6 +35,7 @@ export default function FormsUser({functionForms, methodForm}) {
           className={styles["input-geral"]}
           type="password"
           {...register("password")}
+          required
         />
       </div>
 
@@ -59,7 +60,7 @@ export default function FormsUser({functionForms, methodForm}) {
 
       <div className={styles["forms-container"]}>
         <label className={styles["label-forms"]}>Descrição:</label>
-        <textarea
+        <textarea maxLength={150}
           className={styles["text-description"]}
           cols="30"
           rows="10"
