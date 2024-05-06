@@ -1,5 +1,5 @@
 .register-container {
-    width: 600px;
+    width: 90%;
     height: 400px;
     display: flex;
     justify-content: center;
@@ -91,11 +91,6 @@
 
 /* Media query para telas menores */
 @media screen and (max-width: 600px) {
-    .register-container {
-        width: 90%; /* Usar 90% da largura disponível em telas menores */
-        height: auto; /* Ajustar a altura automaticamente conforme necessário */
-    }
-
     .input-geral,
     .text-description {
         width: 100%; /* Usar largura total para se adaptar a telas menores */

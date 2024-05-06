@@ -7,8 +7,7 @@
     align-items: center;
     padding: 6.8em;
     margin-top: 1;
-
-
+    gap: 2em;
 }
 
 .icon-footer {
@@ -65,23 +64,19 @@
 
 @media screen and (max-width: 768px) {
     .footer {
+        justify-content: center;
         flex-direction: column;
-        height: auto;
-        padding: 2em;
-    }
-
-    .group-icon {
-        margin-bottom: 2em;
-        align-items: center;
-        margin-left: 100px;
+        height: 300px;
+        padding: 1em;
+        gap: 0.5em;
     }
 
     .img-footer {
-        width: 100%;
-        margin-bottom: 2em;
+        width: 60%; 
     }
 
     .text-group-info {
+        justify-content: flex-start;
         align-items: flex-start;
         margin-bottom: 2em;
     }
@@ -91,7 +86,8 @@
     }
 
     .group-info {
-        align-items: flex-start;
+        width: 100%;
+        justify-content: center;
         margin-right: 0;
     }
 }

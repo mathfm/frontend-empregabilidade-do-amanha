@@ -9,6 +9,8 @@
     border-radius: 6px;
     flex-direction: column;
     gap: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .forms {
@@ -89,6 +91,8 @@
 @media screen and (max-width: 768px) {
     .login-container {
         padding: 1em; /* Reduz o preenchimento para telas menores */
+        width: 90%;
+        height: 100%;
     }
 
     .forms {

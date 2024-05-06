@@ -2,6 +2,7 @@
     text-decoration: none;
     color: var(--white);
     font-weight: 600;
+    font-size: 1em;
 }
 
 .page-edit {
@@ -11,6 +12,8 @@
     background-color: var(--secundary);
     padding: 2em; /* Aumentado o preenchimento para melhor espaçamento em telas menores */
     border-radius: 6px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 /* Media query para telas menores */

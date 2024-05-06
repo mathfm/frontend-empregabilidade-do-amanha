@@ -11,6 +11,7 @@
     border-radius: 6px;
     gap: 1em;
     margin-bottom: 2em; /* Adicionado espaço inferior para evitar invadir o footer */
+    margin-top: 2em;
 }
 
 .link {

@@ -64,3 +64,16 @@
     background-color: var(--secundary);
     color: var(--white);
 }
+
+@media screen and (max-width: 530px) {
+
+    
+.text-container h1 {
+    font-size: 1.3em;
+}
+
+.text-paragraph {
+    width: 250px;
+    font-size: 1em;
+}
+}

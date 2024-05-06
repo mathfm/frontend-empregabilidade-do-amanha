@@ -31,3 +31,43 @@
 .link-header:hover {
     color: var(--secundary-y);
 }
+
+@media screen and (max-width: 768px) {
+
+    .img-logo-header {
+        width: 150px;
+    }
+    
+    .nav-link-header {
+        gap: 2em;
+    }
+}
+
+@media screen and (max-width: 620px) {
+
+    .nav-link-header {
+        gap: 1em;
+    }
+
+    .link-header {
+        font-size: 1em;
+    }
+}
+
+
+@media screen and (max-width: 530px) {
+
+    .img-logo-header {
+        width: 100px;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .nav-link-header {
+        gap: 0.5em;
+    }
+    
+}

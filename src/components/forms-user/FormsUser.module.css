@@ -1,7 +1,6 @@
 .forms {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 0.8em;
     max-width: 500px; /* Largura máxima para evitar esticamento em telas grandes */
     width: 90%; /* Largura relativa para ajustar em telas menores */
