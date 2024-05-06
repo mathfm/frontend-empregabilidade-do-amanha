@@ -4,8 +4,9 @@
     align-items: center;
     justify-content: center;
     gap: 1em;
-    width: 750px;
-    height: 250px;
+    width: 90%;
+    max-width: 750px;
+    height: auto;
     color: var(--white);
     padding: 1em;
     border-radius: 5px;
@@ -24,7 +25,8 @@
 
 .container-text {
     text-align: center;
-    width: 700px;
+    width: 90%;
+    max-width: 700px;
 }
 .description {
     word-wrap: break-word;
