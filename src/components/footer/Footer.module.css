@@ -1,11 +1,14 @@
 .footer {
     background-color: var(--secundary-p);
     color: var(--white);
-    display: flex;   
+    display: flex;
     height: 180px;
     justify-content: space-around;
     align-items: center;
-    padding: 1em;
+    padding: 6.8em;
+    margin-top: 1;
+
+
 }
 
 .icon-footer {
@@ -19,10 +22,15 @@
 
 .img-footer {
     width: 300px;
+
 }
+
 .img-footer img {
     width: 100%;
+
 }
+
+
 
 .group-icon {
     display: flex;
@@ -44,7 +52,7 @@
 .text-group-info a {
     text-decoration: none;
     color: var(--white);
-    
+
 }
 
 .group-info {
@@ -53,4 +61,37 @@
     gap: 0.5em;
     align-items: center;
     margin-right: 10%;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 2em;
+    }
+
+    .group-icon {
+        margin-bottom: 2em;
+        align-items: center;
+        margin-left: 100px;
+    }
+
+    .img-footer {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .text-group-info {
+        align-items: flex-start;
+        margin-bottom: 2em;
+    }
+
+    .text-group-info a {
+        text-align: justify;
+    }
+
+    .group-info {
+        align-items: flex-start;
+        margin-right: 0;
+    }
 }
