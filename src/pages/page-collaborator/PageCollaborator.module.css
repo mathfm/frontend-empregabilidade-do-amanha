@@ -30,11 +30,13 @@
 
 .list-card {
     display: flex;
+    flex-wrap: wrap;
     gap: 1em;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .card {
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,6 +53,7 @@
 
     display: flex;
     gap: 1em;
+    justify-content: center;
 
 }
 
@@ -68,4 +71,16 @@
 .delete {
     background-color: red;
     color: white;
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 600px) {
+    .perfil {
+        width: 90%; /* Usar 90% da largura disponível em telas menores */
+        height: auto; /* Ajustar a altura automaticamente conforme necessário */
+    }
+
+    .card {
+        width: 90%; /* Usar 90% da largura disponível em telas menores */
+    }
 }
