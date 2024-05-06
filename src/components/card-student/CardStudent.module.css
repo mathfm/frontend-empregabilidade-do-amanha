@@ -1,6 +1,7 @@
 .card {
-    width: 600px;
-    height: 200px;
+    width: 90%; /* Ajuste para largura relativa */
+    max-width: 600px; /* Largura máxima para evitar esticamento em telas maiores */
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
     background-color: #4E2050;
     color: white;
     display: flex;
@@ -18,7 +19,8 @@
 }
 
 .photo {
-    width: 80px;
+    width: 80%; /* Ajuste para largura relativa */
+    max-width: 80px; /* Largura máxima */
 }
 
 .photo img {
@@ -33,16 +35,38 @@
 .description-card {
     padding: 1em;
     background-color: #27002B;
-    width: 400px;
+    width: 60%; /* Ajuste para largura relativa */
+    max-width: 400px; /* Largura máxima */
     border-radius: 10px;
 }
 
 .link-perfil {
     background-color: #EDDC11;
     text-decoration: none;
-    padding: 0 0.5em;
+    padding: 0.5em 1em; /* Ajuste do preenchimento */
     font-size: 1em;
     border-radius: 10px;
     color: #000000;
     font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Regra de mídia para telas menores */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column; /* Empilhar os itens verticalmente em telas menores */
+        text-align: center; /* Centralizar o conteúdo */
+        padding: 1em 0; /* Ajuste do preenchimento */
+    }
+
+    .photo {
+        width: 100%; /* Reduzir a largura da foto em telas menores */
+        max-width: 100px; /* Largura máxima */
+        margin-bottom: 1em; /* Espaçamento inferior */
+    }
+
+    .description-card {
+        width: 90%; /* Largura relativa */
+        max-width: 400px; /* Largura máxima */
+    }
 }
