@@ -16,12 +16,15 @@
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    width: 100%;
+    max-width: 500px;
 }
 
 .forms-container {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    width: 100%;
 }
 
 .label-forms {
@@ -29,7 +32,7 @@
 }
 
 .input-geral {
-    width: 500px;
+    width: 100%;
     font-size: 1.1em;
     border-radius: 6px;
     padding: 10px;
@@ -58,7 +61,8 @@
 
 .btn-container {
     display: flex;
-    gap: 1em;
+    margin-top: 40px;
+    gap: 2em;
 }
 
 .msg-login {
@@ -80,3 +84,14 @@
     color: var(--secundary-y);
 }
 
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+    .login-container {
+        padding: 1em; /* Reduz o preenchimento para telas menores */
+    }
+
+    .forms {
+        gap: 0.5em; /* Ajuste do espaçamento entre os elementos */
+    }
+}   
