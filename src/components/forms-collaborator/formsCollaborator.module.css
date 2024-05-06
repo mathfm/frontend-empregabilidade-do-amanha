@@ -24,7 +24,8 @@
 }
 
 .input-geral {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     font-size: 1.1em;
     border-radius: 6px;
     padding: 8px;
@@ -34,11 +35,12 @@
 
 .info-external {
     display: flex;
+    flex-wrap: wrap;
     gap: 1em;
 }
 
 .input-short {
-    width: 150px;
+    width: calc(50% - 0.5em);
     height: 35px;
     border-radius: 6px;
     padding: 1em;
@@ -47,7 +49,8 @@
 
 
 .text-description {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 150px;
     font-size: 1em;
     border-radius: 6px;
@@ -84,4 +87,26 @@
     text-decoration: none;
     color: var(--white);
     font-weight: 600;
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 600px) {
+    .register-container {
+        width: 90%; /* Usar 90% da largura disponível em telas menores */
+        height: auto; /* Ajustar a altura automaticamente conforme necessário */
+    }
+
+    .input-geral,
+    .text-description {
+        width: 100%; /* Usar largura total para se adaptar a telas menores */
+        max-width: 100%; /* Remover limite máximo de largura */
+    }
+
+    .info-external {
+        flex-direction: column; /* Alinhar os elementos verticalmente em telas menores */
+    }
+
+    .input-short {
+        width: 100%; /* Usar largura total para se adaptar a telas menores */
+    }
 }
