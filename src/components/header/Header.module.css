@@ -4,6 +4,12 @@
     align-items: center;
     justify-content: space-between;
     height: 90px;
+    transition: height 0.3s;
+}
+
+.header.hidden {
+    height: 0;
+    overflow: hidden;
 }
 
 .img-logo-header {
