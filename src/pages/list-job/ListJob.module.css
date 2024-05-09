@@ -19,7 +19,15 @@
 }
 
 .not-found {
-    color: white;
+    color: var(--white);
+}
+
+span {
+    color: var(--secundary-y);
+}
+
+span:hover {
+    color: var(--white);
 }
 
 @media screen and (max-width: 600px) {
@@ -29,3 +37,4 @@
         gap: 1em;
     }
 }
+

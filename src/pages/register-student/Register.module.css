@@ -1,16 +1,16 @@
 .register-container {
     background-color: var(--secundary);
-    max-width: 500px; /* Alterado para largura máxima em vez de largura fixa */
-    width: 90%; /* Adicionado para garantir que o contêiner não ultrapasse a largura máxima em telas menores */
-    height: 600px; /* Alterado para altura automática para se ajustar ao conteúdo */
+    max-width: 500px;
+    width: 90%; 
+    height: 600px; 
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 2em; /* Aumentado um pouco o preenchimento para melhorar a aparência em telas menores */
+    padding: 2em; 
     border-radius: 6px;
     gap: 1em;
-    margin-bottom: 2em; /* Adicionado espaço inferior para evitar invadir o footer */
+    margin-bottom: 2em; 
 }
 
 .link {
@@ -19,10 +19,10 @@
     font-weight: 500;
 }
 
-/* Media query para telas menores */
+
 @media screen and (max-width: 768px) {
     .register-container {
-        max-width: 90%; /* Reduzido ainda mais a largura máxima em telas menores */
-        margin-bottom: 1em; /* Reduzido espaço inferior em telas menores */
+        max-width: 90%; 
+        margin-bottom: 1em;
     }
 }

@@ -28,10 +28,10 @@ export default function Register() {
         <section className={styles["register-container"]}>
           <FormsUser functionForms={createUser} methodForm="Criar Conta" linkReturn={returnLink} />
           <Link to={"/register-collaborator"} className={styles["link"]}>
-            Quer se registrar como colaborador?
+            Quer se registrar como <span>colaborador?</span>
           </Link>
           <Link to={"/login-student"} className={styles["link"]}>
-            Ja possui um login?
+            Ja possui um <span>login?</span>
           </Link>
         </section>
       </ContainerImg>
