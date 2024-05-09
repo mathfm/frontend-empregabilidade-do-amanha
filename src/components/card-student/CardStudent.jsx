@@ -22,7 +22,7 @@ export default function CardStudent({ description, linkLinkedin, linkGithub }) {
             target="_blank"
             rel="nopenner norefferer"
           >
-            Liknedin
+            Linkedin
           </a>
         </div>
       </div>
