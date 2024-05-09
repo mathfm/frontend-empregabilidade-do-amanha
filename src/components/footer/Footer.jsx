@@ -32,7 +32,7 @@ export const Footer = () => {
           target="_blank"
           rel="nopenner norefferer"
         >
-          Aopie um Aluno
+          Apoie um Aluno
         </a>
       </div>
     </footer>
