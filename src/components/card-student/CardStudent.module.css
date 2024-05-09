@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1em;
 }
 
 .photo {
@@ -35,20 +36,27 @@
 .description-card {
     padding: 1em;
     background-color: #27002B;
-    width: 60%; /* Ajuste para largura relativa */
+    width: 300px; /* Ajuste para largura relativa */
     max-width: 400px; /* Largura máxima */
     border-radius: 10px;
+    word-break: break-all;
+    height: 200px;
+    
 }
 
 .link-perfil {
-    background-color: #EDDC11;
+    background-color: var(--primary);
     text-decoration: none;
     padding: 0.5em 1em; /* Ajuste do preenchimento */
     font-size: 1em;
     border-radius: 10px;
-    color: #000000;
+    color: white;
     font-weight: 600;
-    margin-bottom: 10px;
+}
+
+.container-btn {
+    display: flex;
+    gap: 1em;
 }
 
 /* Regra de mídia para telas menores */

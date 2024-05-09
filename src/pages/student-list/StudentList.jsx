@@ -31,7 +31,6 @@ const StudentList = () => {
                     students.map((student) => (
                         <CardStudent
                             key={student.id}
-                            img={student.github_url} 
                             description={student.description}
                             linkGithub={student.github_url} 
                             linkLinkedin={student.linkedin_url} 
