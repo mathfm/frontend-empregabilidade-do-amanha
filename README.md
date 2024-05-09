@@ -33,8 +33,8 @@
   - [Mobile](#-mobile)
   - [Web](#️-web)
 - [Tecnologias utilizadas no projeto](#-tecnologias-utilizadas-no-projeto)
-  - [Frontend](#frontend)
-  - [Backend](#backend)
+  - [Frontend](#layout-frontend)
+  - [Backend](#layout-backend)
 - [Como executar localmente](#-como-executar-localmente)
   - [Pré-requisitos](#pré-requisitos)
   - [Rodando a aplicação](#-rodando-a-aplicação)
@@ -86,29 +86,27 @@
 
 ### Frontend:
 
-<a href="https://reactjs.org/"><img alt="React" src="https://img.shields.io/badge/React-0e7fc0?style=for-the-badge&logo=react&logoColor=white"></a>
-<a href="https://reactjs.org/docs/react-dom.html"><img alt="React DOM" src="https://img.shields.io/badge/React_DOM-0e7fc0?style=for-the-badge&logo=react&logoColor=white"></a>
-<a href="https://react-hook-form.com/"><img alt="React Hook Form" src="https://img.shields.io/badge/React_Hook_Form-0e7fc0?style=for-the-badge&logo=react&logoColor=white"></a>
-<a href="https://react-icons.github.io/react-icons/"><img alt="React Icons" src="https://img.shields.io/badge/React_Icons-0e7fc0?style=for-the-badge&logo=react&logoColor=white"></a>
-<a href="https://reactrouter.com/"><img alt="React Router DOM" src="https://img.shields.io/badge/React_Router_DOM-0e7fc0?style=for-the-badge&logo=react-router&logoColor=white"></a>
-<a href="https://axios-http.com/"><img alt="Axios" src="https://img.shields.io/badge/Axios-0e7fc0?style=for-the-badge&logo=axios&logoColor=white"></a>
-<a href="https://jwt.io/"><img alt="JWT Decode" src="https://img.shields.io/badge/JWT_Decode-0e7fc0?style=for-the-badge&logo=json-web-tokens&logoColor=white"></a>
-<a href="https://zod-dts.com/"><img alt="Zod" src="https://img.shields.io/badge/Zod-0e7fc0?style=for-the-badge&logo=javascript&logoColor=white"></a>
-<a href="https://eslint.org/"><img alt="Eslint" src="https://img.shields.io/badge/ESLint-0e7fc0?style=for-the-badge&logo=eslint&logoColor=white"></a>
-<a href="https://vitejs.dev/"><img alt="Vite" src="https://img.shields.io/badge/Vite-0e7fc0?style=for-the-badge&logo=vite&logoColor=white"></a>
-
+<a href="https://reactjs.org/"><img alt="React" src="https://img.shields.io/badge/React-34032B?style=for-the-badge&logo=react&logoColor=white"></a>
+<a href="https://reactjs.org/docs/react-dom.html"><img alt="React DOM" src="https://img.shields.io/badge/React_DOM-34032B?style=for-the-badge&logo=react&logoColor=white"></a>
+<a href="https://react-hook-form.com/"><img alt="React Hook Form" src="https://img.shields.io/badge/React_Hook_Form-34032B?style=for-the-badge&logo=react&logoColor=white"></a>
+<a href="https://react-icons.github.io/react-icons/"><img alt="React Icons" src="https://img.shields.io/badge/React_Icons-34032B?style=for-the-badge&logo=react&logoColor=white"></a>
+<a href="https://reactrouter.com/"><img alt="React Router DOM" src="https://img.shields.io/badge/React_Router_DOM-34032B?style=for-the-badge&logo=react-router&logoColor=white"></a>
+<a href="https://axios-http.com/"><img alt="Axios" src="https://img.shields.io/badge/Axios-34032B?style=for-the-badge&logo=axios&logoColor=white"></a>
+<a href="https://jwt.io/"><img alt="JWT Decode" src="https://img.shields.io/badge/JWT_Decode-34032B?style=for-the-badge&logo=json-web-tokens&logoColor=white"></a>
+<a href="https://zod-dts.com/"><img alt="Zod" src="https://img.shields.io/badge/Zod-34032B?style=for-the-badge&logo=javascript&logoColor=white"></a>
+<a href="https://eslint.org/"><img alt="Eslint" src="https://img.shields.io/badge/ESLint-34032B?style=for-the-badge&logo=eslint&logoColor=white"></a>
+<a href="https://vitejs.dev/"><img alt="Vite" src="https://img.shields.io/badge/Vite-34032B?style=for-the-badge&logo=vite&logoColor=white"></a>
 
 ### Backend:
 
-<a href="https://expressjs.com/"><img alt="Express.js" src="https://img.shields.io/badge/Express.js-0e7fc0?style=for-the-badge&logo=express&logoColor=white"></a>
-<a href="https://sequelize.org/"><img alt="Sequelize" src="https://img.shields.io/badge/Sequelize-0e7fc0?style=for-the-badge&logo=sequelize&logoColor=white"></a>
-<a href="https://jwt.io/"><img alt="JSON Web Tokens" src="https://img.shields.io/badge/JSON_Web_Tokens-0e7fc0?style=for-the-badge&logo=json-web-tokens&logoColor=white"></a>
-<a href="https://github.com/dotenv-flow/dotenv-flow"><img alt="Dotenv" src="https://img.shields.io/badge/Dotenv-0e7fc0?style=for-the-badge&logo=dotenv&logoColor=white"></a>
-<a href="https://github.com/expressjs/cors"><img alt="Cors" src="https://img.shields.io/badge/Cors-0e7fc0?style=for-the-badge&logo=cors&logoColor=white"></a>
-<a href="https://github.com/dcodeIO/bcrypt.js/"><img alt="Bcrypt" src="https://img.shields.io/badge/Bcrypt-0e7fc0?style=for-the-badge&logo=bcrypt&logoColor=white"></a>
-<a href="https://github.com/jquense/yup"><img alt="Yup" src="https://img.shields.io/badge/Yup-0e7fc0?style=for-the-badge&logo=yup&logoColor=white"></a>
-<a href="https://www.sqlite.org/index.html"><img alt="SQLite" src="https://img.shields.io/badge/SQLite-0e7fc0?style=for-the-badge&logo=sqlite&logoColor=white"></a>
-
+<a href="https://expressjs.com/"><img alt="Express.js" src="https://img.shields.io/badge/Express.js-34032B?style=for-the-badge&logo=express&logoColor=white"></a>
+<a href="https://sequelize.org/"><img alt="Sequelize" src="https://img.shields.io/badge/Sequelize-34032B?style=for-the-badge&logo=sequelize&logoColor=white"></a>
+<a href="https://jwt.io/"><img alt="JSON Web Tokens" src="https://img.shields.io/badge/JSON_Web_Tokens-34032B?style=for-the-badge&logo=json-web-tokens&logoColor=white"></a>
+<a href="https://github.com/dotenv-flow/dotenv-flow"><img alt="Dotenv" src="https://img.shields.io/badge/Dotenv-34032B?style=for-the-badge&logo=dotenv&logoColor=white"></a>
+<a href="https://github.com/expressjs/cors"><img alt="Cors" src="https://img.shields.io/badge/Cors-34032B?style=for-the-badge&logo=cors&logoColor=white"></a>
+<a href="https://github.com/dcodeIO/bcrypt.js/"><img alt="Bcrypt" src="https://img.shields.io/badge/Bcrypt-34032B?style=for-the-badge&logo=bcrypt&logoColor=white"></a>
+<a href="https://github.com/jquense/yup"><img alt="Yup" src="https://img.shields.io/badge/Yup-34032B?style=for-the-badge&logo=yup&logoColor=white"></a>
+<a href="https://www.sqlite.org/index.html"><img alt="SQLite" src="https://img.shields.io/badge/SQLite-34032B?style=for-the-badge&logo=sqlite&logoColor=white"></a>
 
 
 ---
