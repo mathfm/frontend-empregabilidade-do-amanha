@@ -15,9 +15,6 @@ export const Header = () => {
         <Link to={"/"} className={styles["link-header"]}>
           Home
         </Link>
-        <a href="#" className={styles["link-header"]}>
-          Sobre
-        </a>
         {!isLoggedIn && (
           <>
             <Link to={"/register-student"} className={styles["link-header"]}>

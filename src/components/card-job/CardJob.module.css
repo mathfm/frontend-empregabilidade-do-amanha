@@ -6,7 +6,7 @@
     gap: 1em;
     width: 90%;
     max-width: 750px;
-    height: auto;
+    height: 250px;
     color: var(--white);
     padding: 1em;
     border-radius: 5px;
@@ -32,3 +32,8 @@
     word-wrap: break-word;
 }
 
+@media (max-width: 550px) {
+    .card {
+        width: 300px;
+    }
+}

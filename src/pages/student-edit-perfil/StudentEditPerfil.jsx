@@ -15,7 +15,7 @@ export default function StudentEditPerfil() {
   const deleteStudent = async () => {
     await axios.delete(`http://localhost:3000/api/student/delete/${decodeToken.id}`);
     logout();
-    window.location.replace("/login");
+    window.location.replace("/");
     console.log("Conta foi com deus");
   }
   const updateUser = async (data) => {

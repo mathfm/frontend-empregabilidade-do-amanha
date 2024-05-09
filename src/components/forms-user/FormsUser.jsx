@@ -13,6 +13,7 @@ export default function FormsUser({ functionForms, methodForm, linkReturn }) {
           className={styles["input-geral"]}
           type="text"
           {...register("name")}
+          required
         />
       </div>
       <div className={styles["forms-container"]}>
@@ -40,6 +41,7 @@ export default function FormsUser({ functionForms, methodForm, linkReturn }) {
             className={styles["input-geral"]}
             type="text"
             {...register("github_url")}
+            required
           />
         </div>
         <div className={styles["forms-container"]}>
@@ -48,6 +50,7 @@ export default function FormsUser({ functionForms, methodForm, linkReturn }) {
             className={styles["input-geral"]}
             type="text"
             {...register("linkedin_url")}
+            required
           />
         </div>
       </div>
@@ -60,6 +63,7 @@ export default function FormsUser({ functionForms, methodForm, linkReturn }) {
           cols="30"
           rows="10"
           {...register("description")}
+          required
         ></textarea>
       </div>
 

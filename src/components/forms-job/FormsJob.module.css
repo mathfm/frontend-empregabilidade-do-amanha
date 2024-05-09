@@ -3,29 +3,20 @@
     flex-direction: column;
     align-items: center;
     gap: 1em;
-    max-width: 100%;
-    padding: 0 1em;
-    background-color: var(--secundary);
-    border-radius: 5px;
-    margin: 0 auto; /* Centralize o conteúdo na página */
-    margin-bottom: 10px;
 }
 
 .forms-container {
-    background-color: var(--secundary);
-    padding: 1em;
-    border-radius: 5px;
-    max-width: 800px; /* Defina uma largura máxima para o conteúdo */
-    margin: 0 auto; /* Centralize o conteúdo na página */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .label-forms {
     color: var(--white);
 }
 
-.input-geral, .text-description {
-    width: 100%;
-    max-width: 500px;
+.input-geral {
+    width: 500px;
     font-size: 1.1em;
     border-radius: 6px;
     padding: 10px;
@@ -34,9 +25,12 @@
 
 
 .text-description {
+    width: 500px;
     height: 200px;
     font-size: 1em;
+    border-radius: 6px;
     padding: 1em;
+    border: none;
 }
 
 .btn-forms {
@@ -47,7 +41,6 @@
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
-    margin-bottom: 10px;
 }
 
 .submit {
@@ -63,7 +56,6 @@
 .btn-container {
     display: flex;
     gap: 1em;
-    justify-content: center;
 }
 
 .link {
@@ -71,7 +63,6 @@
     color: var(--white);
     font-weight: 600;
 }
-
 /* Media query para telas menores */
 @media screen and (max-width: 768px) {
     .input-geral, .text-description {
@@ -83,5 +74,14 @@
 @media screen and (max-width: 576px) {
     .forms {
         padding: 0.5em; /* Reduza o preenchimento do formulário em telas muito pequenas */
+    }
+}
+
+@media (max-width: 550px) {
+    .input-geral, .text-description {
+        width: 300px;
+    }
+    .text-description {
+        height: 200px;
     }
 }

@@ -3,17 +3,18 @@
     padding: 2em;
     border-radius: 5px;
     max-width: 800px; /* Defina uma largura máxima para o conteúdo */
-    margin: 0 auto; /* Centralize o conteúdo na página */
+
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .page-register {
         padding: 1em; /* Reduza o preenchimento em telas menores */
     }
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
     .page-register {
         padding: 0.5em; /* Reduza ainda mais o preenchimento em telas menores */
     }
 }
+

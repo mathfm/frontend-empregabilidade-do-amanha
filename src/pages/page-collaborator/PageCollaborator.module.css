@@ -77,7 +77,16 @@
 @media screen and (max-width: 600px) {
     .perfil {
         width: 90%; /* Usar 90% da largura disponível em telas menores */
-        height: auto; /* Ajustar a altura automaticamente conforme necessário */
+        height: 300px; 
+    }
+
+    .page-edit {
+        gap: 2em;
+        flex-wrap: wrap;
+    }
+
+    .img-perfil {
+        width: 80px;
     }
 
     .card {

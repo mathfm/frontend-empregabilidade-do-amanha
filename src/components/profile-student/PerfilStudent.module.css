@@ -59,3 +59,12 @@
     width: 400px;
     word-wrap: break-word;
 }
+
+@media (max-width: 1200px) {
+    .profile-card {
+        height: 500px;
+    }
+    .image {
+        width: 100px;
+    }
+}

@@ -4,7 +4,7 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 export const Footer = () => {
   return (
     <footer className={styles["footer"]}>
-      <figure className="img-footer">
+      <figure className={styles["img-footer"]}>
         <img src="/src/assets/logo-site.svg" alt="" />
       </figure>
       <div className={styles["group-info"]}>
@@ -20,11 +20,23 @@ export const Footer = () => {
       </div>
       <div className={styles["text-group-info"]}>
         <h3>Quem somos?</h3>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
+        <a
+          href="https://programadoresdoamanha.org/"
+          target="_blank"
+          rel="nopenner norefferer"
+        >
+          Sobre
+        </a>
+        <a
+          href="https://programadoresdoamanha.org/apoie-um-aluno"
+          target="_blank"
+          rel="nopenner norefferer"
+        >
+          Aopie um Aluno
+        </a>
       </div>
     </footer>
-  )
+  );
 }
 
 

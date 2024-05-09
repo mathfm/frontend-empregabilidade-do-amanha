@@ -33,3 +33,9 @@
     padding: 0.5em 1em;
     border-radius: 7px;
 }
+
+@media (max-width: 1200px) {
+    .card-project {
+        max-width: 500px;
+    }
+}

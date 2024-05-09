@@ -1,16 +1,12 @@
 .register-container {
     background-color: var(--secundary);
-    max-width: 500px;
-    width: 90%; 
-    height: 600px; 
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 2em; 
     border-radius: 6px;
+    padding: 1em;
     gap: 1em;
-    margin-bottom: 2em; 
 }
 
 .link {
@@ -20,9 +16,17 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 620px) {
     .register-container {
-        max-width: 90%; 
+        margin-top: 2em;
         margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .register-container {
+        width: 100%;
+        font-size: 15px;
+        margin: auto;
     }
 }

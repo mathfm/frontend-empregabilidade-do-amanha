@@ -10,6 +10,7 @@ export default function FormsJob({ functionForms, methodForm, linkReturn }) {
         <input
           type="text"
           className={styles["input-geral"]}
+          required
           {...register("title")}
         />
       </div>
@@ -20,6 +21,7 @@ export default function FormsJob({ functionForms, methodForm, linkReturn }) {
           className={styles["text-description"]}
           cols="30"
           rows="10"
+          required
           {...register("description")}
         ></textarea>
       </div>
@@ -29,6 +31,7 @@ export default function FormsJob({ functionForms, methodForm, linkReturn }) {
           type="text"
           className={styles["input-geral"]}
           {...register("link_job")}
+          required
         />
       </div>
       <div className={styles["btn-container"]}>

@@ -13,6 +13,14 @@ export default function EditFormsJob() {
     const returnLink = () => {
       window.location.replace("/perfil-collaborator");
     }
-  return <FormsJob functionForms={updateLinkJob} methodForm="Atualizar" linkReturn={returnLink}/>;
+  return (
+    <div>
+      <FormsJob
+        functionForms={updateLinkJob}
+        methodForm="Atualizar"
+        linkReturn={returnLink}
+      />
+    </div>
+  );
 }
 
