@@ -64,11 +64,10 @@
     gap: 1em;
 }
 
-/* Regras de mídia para telas menores */
 @media (max-width: 620px) {
     .forms {
         width: 350px;
-        gap: 0.3em; /* Ajuste do espaçamento entre os elementos */
+        gap: 0.3em; 
     }
 
     .input-geral, .text-description {
@@ -99,8 +98,6 @@
         width: 200px;
         font-size: 1em;
     }
-
-    
 
     .text-description {
         width: 200px;
