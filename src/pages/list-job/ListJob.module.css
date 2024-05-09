@@ -32,8 +32,8 @@ span:hover {
 
 @media screen and (max-width: 600px) {
     .link-container {
-        flex-direction: column; /* Alinhar verticalmente os itens */
-        align-items: center; /* Alinhar centralmente na vertical */
+        flex-direction: column;
+        align-items: center; 
         gap: 1em;
     }
 }
