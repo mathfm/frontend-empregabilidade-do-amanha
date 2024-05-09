@@ -71,13 +71,13 @@
 ### Layout Web:
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="layoutWeb" title="#layoutWeb" src="#" width="600px">
+  <img alt="layoutWeb" title="#layoutWeb" src="https://i.imgur.com/6kPtwfU.jpeg" width="600px">
 </p>
 
 ### 📱Layout Mobile:
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="layoutMobile" title="#layoutMobile" src="#" width="600px">
+  <img alt="layoutMobile" title="#layoutMobile" src="https://i.imgur.com/v8XlNXH.jpeg" width="600px">
 </p>
 
 ---
