@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 
@@ -9,22 +10,20 @@ export const Footer = () => {
       </figure>
       <div className={styles["group-info"]}>
         <div className={styles["group-icon"]}>
-          <a href="#">
+          <Link to="#">
             <FaInstagram className={styles["icon-footer"]} />
-          </a>
-          <a href="#">
+          </Link>
+          <Link to="#">
             <FaLinkedin className={styles["icon-footer"]} />
-          </a>
+          </Link>
         </div>
         <p>© All coprights reserved to Squad 6 ❤️</p>
       </div>
       <div className={styles["text-group-info"]}>
         <h3>Quem somos?</h3>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
+        <Link to="#">Sobre</Link>
+        <Link to="#">Contato</Link>
       </div>
     </footer>
-  )
-}
-
-
+  );
+};

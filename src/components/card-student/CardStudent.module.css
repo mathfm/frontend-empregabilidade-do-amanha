@@ -1,48 +1,48 @@
 .card {
-    width: 600px;
-    height: 200px;
-    background-color: #4E2050;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1em;
-    border-radius: 10px;
+  width: 600px;
+  height: 200px;
+  background-color: #4e2050;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1em;
+  border-radius: 10px;
 }
 
 .perfil-photo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .photo {
-    width: 80px;
+  width: 80px;
 }
 
 .photo img {
-    width: 100%;
-    border-radius: 50%;
+  width: 100%;
+  border-radius: 50%;
 }
 
 .card {
-    background: var(--secundary);
+  background: var(--secundary);
 }
 
 .description-card {
-    padding: 1em;
-    background-color: #27002B;
-    width: 400px;
-    border-radius: 10px;
+  padding: 1em;
+  background-color: #27002b;
+  width: 400px;
+  border-radius: 10px;
 }
 
 .link-perfil {
-    background-color: #EDDC11;
-    text-decoration: none;
-    padding: 0 0.5em;
-    font-size: 1em;
-    border-radius: 10px;
-    color: #000000;
-    font-weight: 600;
+  background-color: #eddc11;
+  text-decoration: none;
+  padding: 0 0.5em;
+  font-size: 1em;
+  border-radius: 10px;
+  color: #000000;
+  font-weight: 600;
 }

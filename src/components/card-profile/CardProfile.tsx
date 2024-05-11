@@ -1,30 +1,30 @@
+import { Link } from "react-router-dom";
 import styles from "./CardProfile.module.css";
-import PropTypes from "prop-types";
+
+interface CardProfileProp {
+  name_project: string;
+  description: string;
+  url_project: string;
+}
 export default function CardProfile({
   name_project,
   description,
   url_project,
-}) {
+}: CardProfileProp) {
   return (
     <section className={styles["card-project"]}>
       <div className={styles["info-project"]}>
         <p>{name_project}</p>
         <p className={styles["description"]}>{description}</p>
-        <a
-          href={url_project}
+        <Link
+          to={url_project}
           className={styles["link-project"]}
           target="_blank"
           rel="nopenner norefferer"
         >
           Conferir projeto
-        </a>
+        </Link>
       </div>
     </section>
   );
 }
-
-CardProfile.propTypes = {
-  name_project: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  url_project: PropTypes.string.isRequired,
-};
