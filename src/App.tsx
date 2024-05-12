@@ -25,38 +25,7 @@ function App() {
       <BrowserRouter>
         <AuthProvider>
           <Header />
-          <Container>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/register-student" element={<Register />} />
-              <Route
-                path="/register-collaborator"
-                element={<RegisterCollaborator />}
-              />
-              <Route path="/login-student" element={<LoginStudent />} />
-              <Route
-                path="/login-collaborator"
-                element={<LoginCollaborator />}
-              />
-              <Route path="/list-student" element={<StudentList />} />
-              <Route path="/perfil-student" element={<PageStudent />} />
-              <Route
-                path="/perfil-student-edit"
-                element={<StudentEditPerfil />}
-              />
-              <Route
-                path="/perfil-collaborator"
-                element={<PageCollaborator />}
-              />
-              <Route
-                path="/perfil-collaborator-edit"
-                element={<EditPerfilCollaborator />}
-              />
-              <Route path="/job-register" element={<RegisterJob />} />
-              <Route path="/job-edit" element={<EditFormsJob />} />
-              <Route path="/jobs" element={<ListJob />} />
-            </Routes>
-          </Container>
+          <h1>Teste</h1>
           <Footer />
         </AuthProvider>
       </BrowserRouter>
