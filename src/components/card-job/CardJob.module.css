@@ -1,32 +1,31 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    width: 750px;
-    height: 250px;
-    color: var(--white);
-    padding: 1em;
-    border-radius: 5px;
-    word-wrap: break-word;
-    background-color: var(--secundary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  width: 750px;
+  height: 250px;
+  color: var(--white);
+  padding: 1em;
+  border-radius: 5px;
+  word-wrap: break-word;
+  background-color: var(--secundary);
 }
 
 .link-job {
-    background-color: var(--secundary-y);
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-    padding: 0.5em 1em;
-    border-radius: 10px;;
+  background-color: var(--secundary-y);
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border-radius: 10px;
 }
 
 .container-text {
-    text-align: center;
-    width: 700px;
+  text-align: center;
+  width: 700px;
 }
 .description {
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
-

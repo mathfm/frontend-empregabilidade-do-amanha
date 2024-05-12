@@ -1,12 +1,17 @@
 import { useForm } from "react-hook-form";
 import styles from "./formsCollaborator.module.css";
-import PropTypes from "prop-types";
+
+interface FormsCollaboratorProp {
+  functionForms: () => void;
+  methodPost: string;
+  linkReturn: () => void;
+}
 
 export default function FormsCollaborator({
   functionForms,
   methodPost,
   linkReturn,
-}) {
+}: FormsCollaboratorProp) {
   const { handleSubmit, register } = useForm();
 
   return (
@@ -63,9 +68,3 @@ export default function FormsCollaborator({
     </section>
   );
 }
-
-FormsCollaborator.propTypes = {
-  functionForms: PropTypes.func.isRequired,
-  methodPost: PropTypes.string.isRequired,
-  linkReturn: PropTypes.func.isRequired,
-};

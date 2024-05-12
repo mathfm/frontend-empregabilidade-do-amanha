@@ -1,8 +1,17 @@
 import { useForm } from "react-hook-form";
 import styles from "./FormsUser.module.css";
-import PropTypes from "prop-types";
 
-export default function FormsUser({ functionForms, methodForm, linkReturn }) {
+interface FormsUserProp {
+  functionForms: () => void;
+  methodForm: string;
+  linkReturn: () => void;
+}
+
+export default function FormsUser({
+  functionForms,
+  methodForm,
+  linkReturn,
+}: FormsUserProp) {
   const { register, handleSubmit } = useForm();
 
   return (
@@ -57,8 +66,8 @@ export default function FormsUser({ functionForms, methodForm, linkReturn }) {
         <textarea
           maxLength={150}
           className={styles["text-description"]}
-          cols="30"
-          rows="10"
+          cols={30}
+          rows={10}
           {...register("description")}
         ></textarea>
       </div>
@@ -81,9 +90,3 @@ export default function FormsUser({ functionForms, methodForm, linkReturn }) {
     </form>
   );
 }
-
-FormsUser.propTypes = {
-  functionForms: PropTypes.func.isRequired,
-  methodForm: PropTypes.string.isRequired,
-  linkReturn: PropTypes.func.isRequired,
-};

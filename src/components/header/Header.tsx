@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import { AuthContext } from "../../context/AuthContext";
 
 export const Header = () => {
-  const { isLoggedIn, logout } = useContext(AuthContext);
+  const authContext = useContext(AuthContext);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   useEffect(() => {
@@ -25,7 +25,11 @@ export const Header = () => {
   }, [isHeaderVisible]);
 
   return (
-    <header className={`${styles["header"]} ${isHeaderVisible ? "" : styles["hidden"]}`}>
+    <header
+      className={`${styles["header"]} ${
+        isHeaderVisible ? "" : styles["hidden"]
+      }`}
+    >
       <figure className={styles["img-logo-header"]}>
         <img src="/src/assets/logo-site.svg" alt="" />
       </figure>
@@ -36,7 +40,7 @@ export const Header = () => {
         <a href="#" className={styles["link-header"]}>
           Sobre
         </a>
-        {!isLoggedIn && (
+        {!authContext?.isLoggedIn && (
           <>
             <Link to={"/register-student"} className={styles["link-header"]}>
               Cadastre-se
@@ -46,7 +50,7 @@ export const Header = () => {
             </Link>
           </>
         )}
-        {isLoggedIn && (
+        {authContext?.isLoggedIn && (
           <>
             <Link to={"/student"} className={styles["link-header"]}>
               Estudantes
@@ -68,7 +72,7 @@ export const Header = () => {
                 </Link>
                 <Link
                   to={"/login-student"}
-                  onClick={logout}
+                  onClick={authContext.logout}
                   className={styles["link-header"]}
                 >
                   Logout
@@ -94,7 +98,7 @@ export const Header = () => {
                 </Link>
                 <Link
                   to={"/login-collaborator"}
-                  onClick={logout}
+                  onClick={authContext.logout}
                   className={styles["link-header"]}
                 >
                   Logout

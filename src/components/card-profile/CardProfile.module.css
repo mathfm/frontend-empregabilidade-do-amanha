@@ -1,35 +1,35 @@
 .card-project {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    width: 650px;
-    height: 200px;
-    background-color: var(--secundary);
-    color: var(--white);
-    padding: 1em;
-    border-radius: 10px;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 650px;
+  height: 200px;
+  background-color: var(--secundary);
+  color: var(--white);
+  padding: 1em;
+  border-radius: 10px;
+  justify-content: center;
 }
 
 .info-project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5em;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  text-align: center;
 }
 
 .info-project a {
-    color: var(--white);
-    text-decoration: none;
+  color: var(--white);
+  text-decoration: none;
 }
 
 .description {
-    width: 500px;
+  width: 500px;
 }
 
 .link-project {
-    background-color: var(--primary);
-    padding: 0.5em 1em;
-    border-radius: 7px;
+  background-color: var(--primary);
+  padding: 0.5em 1em;
+  border-radius: 7px;
 }

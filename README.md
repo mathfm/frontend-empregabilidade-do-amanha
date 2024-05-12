@@ -27,6 +27,7 @@
 ---
 
 ## 📋 Tabela de Conteúdos
+
 - [Sobre o projeto](#-sobre-o-projeto)
 - [Funcionalidades](#️-funcionalidades)
 - [Layout do Projeto](#-layout-do-projeto)
@@ -64,6 +65,7 @@
 - [✅] **Delete:** Os usuários também têm a opção de excluir seus perfis do site, se desejarem.
 - [✅] **Logout:** Os usuários podem fazer logout a qualquer momento, conforme desejado.
 - [✅] **Design responsivo:** O layout do site se ajusta automaticamente de acordo com o tamanho da tela do dispositivo, proporcionando uma boa experiência de usuário em diferentes dispositivos.
+
 ---
 
 ## 🎨 Layout do Projeto
@@ -108,14 +110,14 @@
 <a href="https://github.com/jquense/yup"><img alt="Yup" src="https://img.shields.io/badge/Yup-34032B?style=for-the-badge&logo=yup&logoColor=white"></a>
 <a href="https://www.sqlite.org/index.html"><img alt="SQLite" src="https://img.shields.io/badge/SQLite-34032B?style=for-the-badge&logo=sqlite&logoColor=white"></a>
 
-
 ---
 
-## ❓ Como Executar Localmente? 
+## ❓ Como Executar Localmente?
 
 ### Pré-requisitos
 
 Antes de começar, você precisará ter instalado em sua máquina as seguintes ferramentas:
+
 - Git
 - Node.js
 - Editor de código (como o VSCode)
@@ -160,7 +162,8 @@ git clone https://github.com/mathfm/backend-m6.git
 
 ```bash
 cd backend-m6
-``` 
+```
+
 8. Instale as dependências do projeto:
 
 ```bash
@@ -177,14 +180,14 @@ node scr/index.js
 
 ---
 
-##  ❓ Como contribuir para o projeto
+## ❓ Como contribuir para o projeto
 
 1. Faça um **fork** deste repositório e clone o seu fork localmente.
 2. Crie um branch para as suas alterações usando o comando `git checkout -b nome-do-branch`.
 3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`. Siga as [convenções de commit](https://dev.to/mestredosmagos/como-colaborar-em-projetos-no-github-um-guia-para-iniciantes-1aao)
 4. Faça um push do seu branch para o seu fork usando o comando `git push origin nome-do-branch`.
 5. Abra um pull request para este repositório e descreva as suas alterações.
-   
+
 > Se você deseja contribuir para este projeto, fique à vontade para enviar pull requests. Toda contribuição é bem-vinda!
 
 ---

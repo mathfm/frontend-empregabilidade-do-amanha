@@ -1,66 +1,66 @@
 .home-page {
-    background-image: url("/src/assets/background-2.png");
-    width: 100%;
-    height: 91vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
+  background-image: url("/src/assets/background-2.png");
+  width: 100%;
+  height: 91vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
 }
 
 .text-container {
-    color: var(--white);
-    text-align: center;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-    width: 500px;
-    height: 800px;
+  color: var(--white);
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  width: 500px;
+  height: 800px;
 }
 
 .text-container h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .text-paragraph {
-    width: 400px;
-    font-size: 25px;
+  width: 400px;
+  font-size: 25px;
 }
 
 .text-paragraph span {
-    color: var(--secundary-y);
+  color: var(--secundary-y);
 }
 
 .container-btn-home {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .link-home {
-    padding: 0.2em 1em;
-    color: var(--secundary-p);
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 14px;
-    background-color: var(--secundary-y);
-    font-size: 20px;
+  padding: 0.2em 1em;
+  color: var(--secundary-p);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 14px;
+  background-color: var(--secundary-y);
+  font-size: 20px;
 }
 
 .link-home:hover {
-    color: var(--secundary-p);
+  color: var(--secundary-p);
 }
 
 .login {
-    background-color: var(--primary);
-    color: var(--white);
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 .login:hover {
-    background-color: var(--secundary);
-    color: var(--white);
+  background-color: var(--secundary);
+  color: var(--white);
 }
