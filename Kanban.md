@@ -13,3 +13,7 @@
 # DONE:
 
     - Refatorar os componentes e contexto para TypeScript tsx
+    - Modal de Login e Registro
+    - Login e Registro alterado para um unico modal
+    - Pagina Home Refeita
+    - Card de trabalho alterado
