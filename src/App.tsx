@@ -9,6 +9,8 @@ import { Home } from "./pages/home";
 // import StudentList from "./pages/student-list/StudentList";
 import { AuthProvider } from "./context/AuthContext";
 import { PageCollaborator } from "./pages/page-collaborator";
+import StudentList from "./pages/student-list/StudentList";
+import RegisterJob from "./pages/register-job/RegisterJob";
 // import PageStudent from "./pages/page-student/PageStudent";
 // import StudentEditPerfil from "./pages/student-edit-perfil/StudentEditPerfil";
 // import LoginStudent from "./pages/login-student/LoginStudent";
@@ -29,6 +31,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/perfil-collaborator" element={<PageCollaborator />} />
+            <Route path="/student" element={<StudentList />} />
+            <Route path="/publicar-vaga" element={<RegisterJob /> } />
           </Routes>
           <Footer />
         </AuthProvider>

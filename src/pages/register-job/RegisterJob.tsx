@@ -1,27 +1,34 @@
-import axios from "axios";
 import FormsJob from "../../components/forms-job/FormsJob";
-import styles from "./RegisterJob.module.css";
 import { jwtDecode } from "jwt-decode";
 import { useForm } from "react-hook-form";
+import { JobModel } from "../../models/JobModel";
+import { JwtTokenModel } from "../../models/JwtTokenModel";
+import { api } from "../../services/apiService";
+import { useNavigate } from "react-router-dom";
+
+
 export default function RegisterJob() {
-  const { reset } = useForm();
-  const registerJob = async (data) => {
-    const tokenDecode = jwtDecode(localStorage.getItem("token"));
+  const { reset } = useForm<JobModel>();
+  const _navigate = useNavigate();
+  const registerJob = async (data: JobModel) => {
+    
+    const tokenDecode = jwtDecode<JwtTokenModel>(localStorage.getItem("token") || "");
+
+    
     try {
-      await axios.post(`http://localhost:3000/api/job/create/${tokenDecode.id}`, data);
+      await api.post(`/job/create/${tokenDecode.id}`, data);      
       reset();
-      window.location.reload();
+      _navigate(0)
     } catch (error) {
-      console.log("Error ao tentar registrar uma nova vaga");
+      console.log(error);
     }
   }
   const returnLink = () => {
-    window.location.replace("/perfil-collaborator");
+    _navigate("/perfil-collaborator");
   }
   return (
-    <div className={styles["page-register"]}>
+    <div className="bg-purple-900 h-screen flex items-center justify-center">
       <FormsJob functionForms={registerJob} methodForm="Registrar" linkReturn={returnLink}/>
-
     </div>
   )
 }

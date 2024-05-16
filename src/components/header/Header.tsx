@@ -1,11 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const authContext = useContext(AuthContext);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  const [logado, setLogado] = useState(false);
 
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -23,13 +24,18 @@ export const Header = () => {
     };
   }, [isHeaderVisible]);
 
+  const dashBoard =
+    localStorage.getItem("type") === "student" ? "/perfil-student"
+      : localStorage.getItem("type") === "collaborator" ? "/perfil-collaborator"
+      : "/";  
+
   return (
     <header className="navbar bg-purple-950 text-white h-30">
       <div className="flex-1 w-32">
         <img className="h-12" src="/src/assets/logo-site.svg" alt="Marca do site" />
       </div>
       <nav className="flex-none">
-        {!logado && (
+        {!authContext?.isLoggedIn && (
           <ul className="menu menu-horizontal px-1 text-xl mr-5">
             <li className="active:border-b-2 border-yellow-500 hover:text-yellow-500">
               <a>Home</a>
@@ -43,22 +49,27 @@ export const Header = () => {
             
           </ul>
         )}
-        {logado && (
+        {authContext?.isLoggedIn && (
           <ul className="menu menu-horizontal px-1 text-xl mr-5">
+
             <li className="active:border-b-2 border-yellow-500 hover:text-yellow-500">
               <a>Estudantes</a>
             </li>
-            <li className="active:border-b-2 border-yellow-500 hover:text-yellow-500">
-              <a>Publicar Vaga</a>
-            </li>
+
+            {localStorage.getItem("type") === "collaborator" &&
+              <li className="active:border-b-2  border-yellow-500 hover:text-yellow-500 ">
+                <Link to={"/publicar-vaga"} className="focus:text-white">Publicar Vaga</Link>
+              </li>
+            }
             <li>
               <details>
-                <summary className="hover:text-yellow-500 focus-visible:text-yellow-500">
+                <summary className="hover:text-yellow-500 focus-visible:text-yellow-500 w-32 flex justify-center items-center">
                   Perfil
                 </summary>
-                <ul className="p-2 bg-purple-950 rounded-t-none">
+                <ul className="p-2 bg-purple-950 rounded-t-none flex justify-center items-center flex-col ">
+                  <li><Link className="focus:text-white" to={dashBoard}>Ver Perfil</Link></li>
                   <li><a>Editar</a></li>
-                  <li><a>Logout</a></li>
+                  <li><Link to={"/"} onClick={() => authContext.logout()}>Logout</Link></li>
                 </ul>
               </details>
             </li>

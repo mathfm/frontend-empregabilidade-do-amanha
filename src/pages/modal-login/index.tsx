@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { TypeUser } from "../../components/type-user";
-import { FieldValues, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { api } from "../../services/apiService";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from '../../context/AuthContext';
+
 
 
 interface IModalLogin {
@@ -21,6 +23,7 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
     const [user, setUser] = useState<'estudante' | 'colaborador'>('estudante')
     const { register, handleSubmit } = useForm<IUserForm>();
     const _navigate = useNavigate();
+    const authContext = useContext(AuthContext);
 
     const setType = (type: 'estudante' | 'colaborador') => {
         setUser(type);
@@ -35,13 +38,19 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
 
     const loginCollaborator = async (data: IUserForm) => {
         try {
-            const collaborator = await api.post("/employer/login", data);
-            console.log(collaborator);
+            
+            const respCollaborator = await api.post("/employer/login", data);
             setIsModalLoginOpen(false);
-            _navigate("/perfil-collaborator");
+            const { token } = respCollaborator.data;
+            if (token) {
+                authContext?.login(token);
+                localStorage.setItem("type", "collaborator");
+                _navigate("/perfil-collaborator");
+            }
+            
             
         } catch (error) {
-            console.log(error);
+            return "Error ao tentar fazer o login"
         }
     }
 
