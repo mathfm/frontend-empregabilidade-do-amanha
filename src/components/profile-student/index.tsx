@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import styles from "./PerfilStudent.module.css";
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 
 interface PerfilStudentProp {
@@ -11,7 +10,7 @@ interface PerfilStudentProp {
   description: string;
 }
 
-export default function PerfilStudent({
+export function PerfilStudent({
   img,
   linkedin_url,
   github_url,
@@ -20,35 +19,35 @@ export default function PerfilStudent({
   description,
 }: PerfilStudentProp) {
   return (
-    <section className={styles["profile-card"]}>
-      <figure className={styles["image"]}>
-        <img src={img} alt="" />
+    <section className="flex flex-col justify-evenly w-[440px] h-[690px] text-center rounded-xl p-4 bg-purple-800 items-center text-white">
+      <figure className="w-36">
+        <img src={img} className="w-full rounded-full" alt="" />
       </figure>
-      <div className={styles["profile-info"]}>
+      <div className="flex flex-col gap-4">
         <h3>{name}</h3>
         <p>{email}</p>
-        <p className={styles["description"]}>{description}</p>
+        <p className="w-96 break-words">{description}</p>
       </div>
 
-      <div className={styles["group-icon"]}>
+      <div className="flex gap-4">
         <Link
           to={`https://github.com/${github_url}`}
-          className={styles["link"]}
+          className="flex flex-col items-center gap-1 text-yellow-500 font-semibold"
           target="_blank"
           rel="nopenner norefferer"
         >
-          <FaGithub className={styles["icon"]} />
-          <p className={styles["text-link"]}>Github</p>
+          <FaGithub className="text-5xl" />
+          <p className="no-underline">Github</p>
         </Link>
 
         <Link
           to={`https://www.linkedin.com/in/${linkedin_url}/`}
-          className={styles["link"]}
+          className="flex flex-col items-center gap-1 text-yellow-500 font-semibold"
           target="_blank"
           rel="nopenner norefferer"
         >
-          <FaLinkedin className={styles["icon"]} />
-          <p className={styles["text-link"]}>Linkedin</p>
+          <FaLinkedin className="text-5xl" />
+          <p className="no-underline">Linkedin</p>
         </Link>
       </div>
     </section>

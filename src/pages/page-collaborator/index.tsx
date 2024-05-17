@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CardJob from "../../components/card-job/CardJob";
+import CardJob from "../../components/card-job";
 import { jwtDecode } from "jwt-decode";
 import { CollaboratorModel } from "../../models/CollaboratorModel";
 import { JobModel } from "../../models/JobModel";

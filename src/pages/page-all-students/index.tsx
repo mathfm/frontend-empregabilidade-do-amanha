@@ -1,10 +1,9 @@
-import CardStudent from "../../components/card-student/CardStudent";
-import styles from "./StudentList.module.css";
+import CardStudent from "../../components/card-student";
 
-export default function StudentList() {
+export function PageAllStudents() {
     return (
-        <section className={styles["card-page"]}>
-            <div className={styles["card-container"]}>
+        <section className="w-full min-h-screen flex items-start justify-center bg-purple-900">
+            <div className="flex items-center flex-wrap gap-12">
                 <CardStudent
                     img="/src/assets/img-profile.jpg"
                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti officia, repudiandae necessitatibus..."
@@ -12,7 +11,7 @@ export default function StudentList() {
                 />
                 <CardStudent
                     img="/src/assets/img-profile.jpg"
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti officia, repudiandae necessitatibus..."
+                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti officia, repudiandae necessitatibus repudiandae necessitatibusrepudiandae necessitatibusrepudiandae necessitatibus...necessitatibus...necessitatibus...necessitatibus...necessitatibus..."
                     linkPerfil="#"
                 />
                 <CardStudent

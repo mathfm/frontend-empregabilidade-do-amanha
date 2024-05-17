@@ -8,7 +8,7 @@ interface FormsJobProp {
   linkReturn: () => void;
 }
 
-export default function FormsJob({
+export function FormsJob({
   functionForms,
   methodForm,
   linkReturn,

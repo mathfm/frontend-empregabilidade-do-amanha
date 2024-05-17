@@ -40,7 +40,6 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
         try {
             
             const respCollaborator = await api.post("/employer/login", data);
-            setIsModalLoginOpen(false);
             const { token } = respCollaborator.data;
             if (token) {
                 authContext?.login(token);
@@ -54,14 +53,28 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
         }
     }
 
+    const loginStudent = async (data: IUserForm) => { 
+        try {
+            const respStudent = await api.post("/login/student", data);
+            const { token } = respStudent.data;
+            if (token) {
+                authContext?.login(token);
+                localStorage.setItem("type", "student");
+                _navigate("/perfil-estudante");
+            }
+        } catch (error) {
+            return "Error ao tentar fazer o login"
+        }
+    }
+
     if (!isOpenLogin) {
         return null;
     } 
 
 
-    const loginUser = async (data: IUserForm) => {
+    const handleLoginUser = async (data: IUserForm) => {
         if (user == "estudante") {
-            console.log("login feito como estudante ", data);
+            loginStudent(data);
         }
         if (user == "colaborador") {
             loginCollaborator(data);
@@ -73,26 +86,35 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
             <div className="modal-box h-[450px] flex flex-col justify-evenly gap-5 bg-purple-950">
                 <div className="text-white flex justify-start items-center flex-col gap-5">
                     <h3 className="font-bold text-lg">Deseja fazer login como:</h3>
-                    <TypeUser typeUser={user} setTypeUser={setType}/>
+                    <TypeUser typeUser={user} setTypeUser={setType} />
                 </div>
-                <form className="flex flex-col gap-5" onSubmit={handleSubmit(loginUser)}>
+                <form className="flex flex-col gap-5" onSubmit={handleSubmit(handleLoginUser)}>
                     <div>
                         <label className="input input-bordered flex items-center gap-2">
                             Email
-                            <input type="email" className="grow" {...register("email")} />
+                            <input type="email" className="grow" {...register('email')} />
                         </label>
                     </div>
                     <div>
                         <label className="input input-bordered flex items-center gap-2">
                             Senha
-                            <input type="password" className="grow" {...register("password")} />
+                            <input type="password" className="grow" {...register('password')} />
                         </label>
                     </div>
-                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-white" onClick={() => setIsModalLoginOpen(!isOpenLogin)}>✕</button>
-                    <button type="submit" className="btn bg-yellow-500 border-yellow-600 font-bold text-lg">Fazer login</button>
+                    <button type="submit" className="btn bg-yellow-500 border-yellow-600 font-bold text-lg">
+                        Fazer login
+                    </button>
                 </form>
-                <button className="text-white underline" onClick={handleSignup}>Não tem uma conta?</button>
-                </div>     
+                <button className="text-white underline" onClick={handleSignup}>
+                    Não tem uma conta?
+                </button>
+                <button
+                    className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-white"
+                    onClick={() => setIsModalLoginOpen(!isOpenLogin)}
+                >
+                    X
+                </button>
+            </div>
         </dialog>
     )
 }

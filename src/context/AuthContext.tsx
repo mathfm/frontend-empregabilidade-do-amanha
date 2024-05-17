@@ -31,6 +31,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const logout = () => {
     setIsLoggedIn(false);
     localStorage.removeItem("token");
+    localStorage.removeItem("type");
   };
 
   const authContextData: AuthContextData = {

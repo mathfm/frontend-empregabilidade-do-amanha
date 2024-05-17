@@ -28,7 +28,13 @@ export function ModalSignup({ isOpenSignup, setIsModalSignupOpen, setIsModalLogi
     };
 
     const createStudent = async (student: StudentModel) => {
-        await api.post("/student/create", student)
+        try {
+            const user = await api.post("/student/create", student);
+            console.log(user);
+        } catch (error) {
+            console.log(error);
+        }
+
     }
 
     const createCollaborator = async (collaborator: CollaboratorModel) => {
@@ -40,6 +46,8 @@ export function ModalSignup({ isOpenSignup, setIsModalSignupOpen, setIsModalLogi
             console.log(error);
         }
     }
+
+
 
     const handleLogin = () => {
         setIsModalSignupOpen(false);
@@ -54,8 +62,8 @@ export function ModalSignup({ isOpenSignup, setIsModalSignupOpen, setIsModalLogi
                 email: data.email,
                 password:  data.password,
                 description: data.description || "",
-                linkedin: data.linkedin || "",
-                github: data.github || ""
+                linkedin_url: data.linkedin || "",
+                github_url: data.github || ""
             });
         }
 

@@ -1,4 +1,4 @@
-import FormsJob from "../../components/forms-job/FormsJob";
+import { FormsJob } from "../../components/forms-job";
 import { jwtDecode } from "jwt-decode";
 import { useForm } from "react-hook-form";
 import { JobModel } from "../../models/JobModel";
@@ -7,7 +7,7 @@ import { api } from "../../services/apiService";
 import { useNavigate } from "react-router-dom";
 
 
-export default function RegisterJob() {
+export function RegisterJob() {
   const { reset } = useForm<JobModel>();
   const _navigate = useNavigate();
   const registerJob = async (data: JobModel) => {

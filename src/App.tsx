@@ -1,26 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Footer } from "./components/footer/Footer";
-import { Header } from "./components/header/Header";
+import { Footer } from "./components/footer";
+import { Header } from "./components/header";
 import { Home } from "./pages/home";
-// import Register from "./pages/register-student/Register";
-// import { Container } from "./components/container/Container";
-
-// import StudentList from "./pages/student-list/StudentList";
 import { AuthProvider } from "./context/AuthContext";
 import { PageCollaborator } from "./pages/page-collaborator";
-import StudentList from "./pages/student-list/StudentList";
-import RegisterJob from "./pages/register-job/RegisterJob";
-// import PageStudent from "./pages/page-student/PageStudent";
-// import StudentEditPerfil from "./pages/student-edit-perfil/StudentEditPerfil";
-// import LoginStudent from "./pages/login-student/LoginStudent";
-// import LoginCollaborator from "./pages/login-collaborator/LoginCollaborator";
-
-// import RegisterCollaborator from "./pages/register-collaborator/RegisterCollaborator";
-// import EditPerfilCollaborator from "./pages/edit-perfil-collaborator/EditPerfilCollaborator";
-// import RegisterJob from "./pages/register-job/RegisterJob";
-// import EditFormsJob from "./pages/edit-forms-job/EditFormsJob";
-// import ListJob from "./pages/list-job/ListJob";
+import { PageAllStudents} from "./pages/page-all-students";
+import { RegisterJob } from "./pages/register-job";
+import { PageAllJobs } from "./pages/page-all-jobs";
+import { PerfilEditCollaborator } from "./pages/perfil-edit-collaborator";
+import { PageStudent } from "./pages/page-student";
+import { PerfilEditStudent } from "./pages/perfil-edit-student";
 
 function App() {
   return (
@@ -31,8 +21,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/perfil-collaborator" element={<PageCollaborator />} />
-            <Route path="/student" element={<StudentList />} />
+            <Route path="/perfil-colaborador/edit" element={<PerfilEditCollaborator />} />
             <Route path="/publicar-vaga" element={<RegisterJob /> } />
+            <Route path="/perfil-estudante" element={<PageStudent /> } />
+            <Route path="/perfil-estudante/edit" element={<PerfilEditStudent /> } />
+            <Route path="/estudantes" element={<PageAllStudents />} />
+            <Route path="/vagas" element={<PageAllJobs /> } />
           </Routes>
           <Footer />
         </AuthProvider>

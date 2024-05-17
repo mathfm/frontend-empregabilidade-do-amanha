@@ -9,10 +9,10 @@ interface ICardJob {
 
 export default function CardJob({ title, description, link, isCollaborator, deleteCard, editCard }: ICardJob) {
   return (
-    <div className="card w-[600px] h-[350px] bg-purple-800 text-white">
+    <div className={`card ${isCollaborator ? "w-[600px] h-[350px]" : "w-[550px] h-[300px]"} bg-purple-800 text-white border-yellow-500`}>
       <div className="card-body gap-4">
         <h2 className="card-title">{title}</h2>
-        <p className="w-[550px] break-words">{description}</p>
+        <p className="w-[500px] break-words">{description}</p>
         <div className="flex justify-center">
           <a href={link} className="bg-purple-950 py-2 px-4 rounded-lg font-semibold" target="_blank" rel="nopenner norefferer">Acessar vaga</a>
         </div>
