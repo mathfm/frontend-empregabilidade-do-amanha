@@ -32,7 +32,7 @@ export const Header = () => {
         : "/";  
   
   const editProfile = localStorage.getItem("type") === "student" ? "/perfil-estudante/edit"
-    : localStorage.getItem("type") === "collaborator" ? "/perfil-collaborator/edit"
+    : localStorage.getItem("type") === "collaborator" ? "/perfil-colaborador/edit"
       : "/";  
 
   return (

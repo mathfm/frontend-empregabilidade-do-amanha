@@ -11,23 +11,40 @@ import { ProjectModel } from "../../models/ProjectModel";
 export function PageStudent() {
   const [repository, setRepository] = useState<ProjectModel[]>();
   const [user, setUser] = useState<StudentModel>();
+  const decodeToken = jwtDecode<JwtTokenModel>(localStorage.getItem("token") || "");
+
   useEffect(() => {
     async function loadRepositories() {
-      const decodeToken = jwtDecode<JwtTokenModel>(localStorage.getItem("token") || "");
       const findUser = await api.get(`/student/${decodeToken.id}`, {
         headers: { 'Authorization': 'Bearer ' + localStorage.getItem("token") }
       });
-      setUser(findUser.data);
 
-      const response = await axios.get(
-        `https://api.github.com/users/${findUser.data.github_url}/repos?sort=created&direction=desc`
-      );
-      const data = await response.data;
-      setRepository(data);
+        setUser(findUser.data);
+        const response = await axios.get(
+          `https://api.github.com/users/${findUser.data.github_url}/repos?sort=created&direction=desc`
+        );
+        const data = await response.data;
+        setRepository(data);
+      
+    }
+    if (decodeToken.type === "student") {
+      loadRepositories();
     }
 
-    loadRepositories();
+    else if (decodeToken.type === "collaborator") {
+      api.get(`/student/${localStorage.getItem("id_student")}`, {
+        headers: { 'Authorization': 'Bearer '+ localStorage.getItem("token") }
+      })
+        .then((resp) => {
+          setUser(resp.data);          
+          axios.get(`https://api.github.com/users/${resp.data.github_url}/repos?sort=created&direction=desc`)
+            .then((github) => {
+              setRepository(github.data);              
+            });
+      })
+    }
   }, []);
+  
   return (
     <section className="w-full min-h-svh flex gap-4 items-center justify-center bg-purple-950">
       {
@@ -56,7 +73,7 @@ export function PageStudent() {
               />
             ))
         ) : (
-            <p>Repositório não encontrado.</p>
+            <p className="text-white text-3xl">Repositório não encontrado.</p>
         )}
       </div>
     </section>
