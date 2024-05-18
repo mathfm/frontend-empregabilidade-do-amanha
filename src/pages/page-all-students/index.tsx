@@ -15,13 +15,13 @@ export function PageAllStudents() {
     }, []);
 
     return (
-        <section className="w-full min-h-screen flex items-start justify-center bg-purple-900">
-            <div className="flex items-center flex-wrap gap-12">
+        <section className="w-full min-h-screen flex items-start bg-purple-900">
+            <div className="flex items-center flex-wrap gap-12 lg:justify-start justify-center">
                 {allStudent !== undefined && allStudent.length >= 0 &&  (
                     allStudent.map((student) => 
                         <CardStudent
                             key={student.id}
-                            id={student.id}
+                            id={student.id || ""}
                             description={student.description}
                         />
                     )

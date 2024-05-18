@@ -16,7 +16,7 @@ export default function CardStudent({
   }
   
   return (
-    <section className="w-[600px] h-52 flex items-center justify-around p-1 rounded-lg text-white bg-purple-950">
+    <section className="md:w-[600px] md:min-h-52 md:flex-row md:justify-around justify-evenly flex-col flex w-72 min-h-[350px] max-h-[500px] items-center  p-1 rounded-lg text-white bg-purple-950">
       <div className="flex flex-col gap-4 items-center justify-center">
         <figure>
           <img className="w-20 rounded-full" src="/src/assets/img-profile-2.jpg" alt="foto de perfil do estudante" />
@@ -25,7 +25,7 @@ export default function CardStudent({
           Ver Perfil
         </button>
       </div>
-      <p className="py-4 px-2 bg-purple-900 w-[400px] rounded-xl break-words">{description}</p>
+      <p className="py-4 px-2 max-h-[300px] bg-purple-900 md:w-[400px] w-64 md:h-auto rounded-xl break-words">{description}</p>
     </section>
   );
 }

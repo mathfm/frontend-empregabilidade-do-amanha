@@ -19,14 +19,14 @@ export function PerfilStudent({
   description,
 }: PerfilStudentProp) {
   return (
-    <section className="flex flex-col justify-evenly w-[440px] h-[690px] text-center rounded-xl p-4 bg-purple-800 items-center text-white">
-      <figure className="w-36">
+    <section className="flex flex-col justify-evenly md:w-[440px] h-[500px] md:h-[690px] text-center rounded-xl p-4 bg-purple-800 items-center text-white">
+      <figure className="md:w-36 w-32">
         <img src={img} className="w-full rounded-full" alt="" />
       </figure>
       <div className="flex flex-col gap-4">
         <h3>{name}</h3>
         <p>{email}</p>
-        <p className="w-96 break-words">{description}</p>
+        <p className="w-96 break-words ">{description}</p>
       </div>
 
       <div className="flex gap-4">
@@ -36,7 +36,7 @@ export function PerfilStudent({
           target="_blank"
           rel="nopenner norefferer"
         >
-          <FaGithub className="text-5xl" />
+          <FaGithub className="md:text-5xl text-4xl" />
           <p className="no-underline">Github</p>
         </Link>
 
@@ -46,7 +46,7 @@ export function PerfilStudent({
           target="_blank"
           rel="nopenner norefferer"
         >
-          <FaLinkedin className="text-5xl" />
+          <FaLinkedin className="md:text-5xl text-4xl" />
           <p className="no-underline">Linkedin</p>
         </Link>
       </div>

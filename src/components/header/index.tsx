@@ -36,7 +36,7 @@ export const Header = () => {
       : "/";  
 
   return (
-    <header className="navbar bg-black/90 text-white h-30">
+    <header className="navbar bg-black/90 text-white h-30 flex-col md:flex-row">
       <div className="flex-1 w-32">
         <img className="h-12" src="/src/assets/logo-site.svg" alt="Marca do site" />
       </div>

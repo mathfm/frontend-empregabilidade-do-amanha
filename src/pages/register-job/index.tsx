@@ -5,6 +5,7 @@ import { JobModel } from "../../models/JobModel";
 import { JwtTokenModel } from "../../models/JwtTokenModel";
 import { api } from "../../services/apiService";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 
 export function RegisterJob() {
@@ -18,9 +19,9 @@ export function RegisterJob() {
     try {
       await api.post(`/job/create/${tokenDecode.id}`, data);      
       reset();
-      _navigate(0)
+      toast.success("Sua vaga foi cadastrada com sucesso!");
     } catch (error) {
-      console.log(error);
+      toast.error("Ocorreu um erro, não foi possivel registrar a vaga.");
     }
   }
   const returnLink = () => {

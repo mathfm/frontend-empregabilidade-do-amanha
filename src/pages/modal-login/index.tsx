@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { api } from "../../services/apiService";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../../context/AuthContext';
+import toast from "react-hot-toast";
 
 
 
@@ -49,13 +50,15 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
             
             
         } catch (error) {
-            return "Error ao tentar fazer o login"
+            toast.error("Email ou senha invalido");
         }
     }
 
     const loginStudent = async (data: IUserForm) => { 
         try {
-            const respStudent = await api.post("/login/student", data);
+            
+            const respStudent = await api.post("/student/login", data);
+            
             const { token } = respStudent.data;
             if (token) {
                 authContext?.login(token);
@@ -63,7 +66,7 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
                 _navigate("/perfil-estudante");
             }
         } catch (error) {
-            return "Error ao tentar fazer o login"
+            toast.error("Email ou senha invalido");
         }
     }
 

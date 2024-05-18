@@ -27,34 +27,37 @@ export function PageStudent() {
         setRepository(data);
       
     }
-    if (decodeToken.type === "student") {
+
+    if (localStorage.getItem("id_student") !== null) {      
+      api.get(`/student/${localStorage.getItem("id_student")}`, {
+        headers: { 'Authorization': 'Bearer ' + localStorage.getItem("token") }
+      })
+        .then((resp) => {
+          setUser(resp.data);
+          axios.get(`https://api.github.com/users/${resp.data.github_url || ""}/repos?sort=created&direction=desc`)
+            .then((github) => {
+              setRepository(github.data);
+              localStorage.removeItem("id_student");
+            });
+        })
+    }
+
+    else if (decodeToken.type === "student") {
       loadRepositories();
     }
 
-    else if (decodeToken.type === "collaborator") {
-      api.get(`/student/${localStorage.getItem("id_student")}`, {
-        headers: { 'Authorization': 'Bearer '+ localStorage.getItem("token") }
-      })
-        .then((resp) => {
-          setUser(resp.data);          
-          axios.get(`https://api.github.com/users/${resp.data.github_url}/repos?sort=created&direction=desc`)
-            .then((github) => {
-              setRepository(github.data);              
-            });
-      })
-    }
   }, []);
   
   return (
-    <section className="w-full min-h-svh flex gap-4 items-center justify-center bg-purple-950">
+    <section className="w-full min-h-svh flex flex-col md:flex-row gap-4 items-center justify-center bg-purple-950">
       {
         repository?.length !== undefined && repository.slice(0, 1).map((repo) => {
           return <PerfilStudent
             key={repo.id}
             img={repo.owner.avatar_url || "/src/assets/img-profile-2.jpg"}
-            github_url={user?.github_url || ""}
+            github_url={user?.github_url || "#"}
             linkedin_url={user?.linkedin_url || "#"}
-            description={user?.description || "#"}
+            description={user?.description || ""}
             email={user?.email || ""}
             name={user?.name || ""} />;
           

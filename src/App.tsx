@@ -11,10 +11,12 @@ import { PageAllJobs } from "./pages/page-all-jobs";
 import { PerfilEditCollaborator } from "./pages/perfil-edit-collaborator";
 import { PageStudent } from "./pages/page-student";
 import { PerfilEditStudent } from "./pages/perfil-edit-student";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <>
+      <Toaster position="top-right" toastOptions={{duration: 2000}}/>
       <BrowserRouter>
         <AuthProvider>
           <Header />

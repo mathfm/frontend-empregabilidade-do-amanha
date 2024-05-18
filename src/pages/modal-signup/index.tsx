@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { TypeUser } from "../../components/type-user";
 import { useForm } from "react-hook-form";
-import { StudentModel } from "../../models/StudentModel";
 import { api } from "../../services/apiService";
 import { CollaboratorModel } from "../../models/CollaboratorModel";
+import toast from "react-hot-toast";
 
 interface IModalSignup {
     isOpenSignup: boolean;
@@ -21,55 +21,58 @@ interface FormData {
 }
 
 export function ModalSignup({ isOpenSignup, setIsModalSignupOpen, setIsModalLoginOpen }: IModalSignup) {
-    const { register, handleSubmit } = useForm<FormData>();
+    const { register, handleSubmit, reset } = useForm<FormData>();
     const [user, setUser] = useState<'estudante' | 'colaborador'>('estudante')
     const setType = (type: 'estudante' | 'colaborador') => {
         setUser(type);
     };
-
-    const createStudent = async (student: StudentModel) => {
-        try {
-            const user = await api.post("/student/create", student);
-            console.log(user);
-        } catch (error) {
-            console.log(error);
-        }
-
-    }
-
-    const createCollaborator = async (collaborator: CollaboratorModel) => {
-        try {
-            const user = await api.post("/employer/create", collaborator);
-            console.log(user);
-
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
-
 
     const handleLogin = () => {
         setIsModalSignupOpen(false);
         setIsModalLoginOpen(true);
     }
 
-    const signupUser = async (data: FormData) => {
+    const signupUser = (data: FormData) => {
 
         if (user === 'estudante') {
-            createStudent({
+            api.post("/student/create", {
                 name: data.name,
                 email: data.email,
                 password:  data.password,
-                description: data.description || "",
+                description: data.description,
                 linkedin_url: data.linkedin || "",
-                github_url: data.github || ""
-            });
+                github_url: data.github || "",
+            })
+                .then(() => {
+                    toast.success("Cadastro realizado com sucesso!");
+                    reset();
+                }).catch((err) => {
+                    if (err.response && err.response.status === 400 && err.response.data.errors) {
+                        const { data } = err.response;
+                        const { errors } = data;
+                        toast.error(errors[0].error);
+                    } else {
+                        toast.error(err.response.data.error);
+                    }
+                });
         }
 
         if (user === 'colaborador') {
-            createCollaborator(data);
-        }                
+            api.post("/employer/create", data as CollaboratorModel)
+                .then(() => {
+                    toast.success("Cadastro realizado com sucesso!");
+                    reset();
+                })
+                .catch((err) => {
+                    if (err.response && err.response.status === 400 && err.response.data.errors) {
+                        const { data } = err.response;
+                        const { errors } = data;
+                        toast.error(errors[0].error);
+                    } else {
+                        toast.error(err.response.data.error);
+                    }
+                });
+        }
     }
 
     return (
@@ -82,26 +85,26 @@ export function ModalSignup({ isOpenSignup, setIsModalSignupOpen, setIsModalLogi
                 <form className="flex flex-col gap-5" onSubmit={handleSubmit(signupUser)}>
                     <label className="input input-bordered flex items-center gap-2">
                         Nome
-                        <input type="text" className="grow" {...register("name")} required/>
+                        <input type="text" className="grow" {...register("name")} required />
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
                         Email
-                        <input type="email" className="grow" {...register("email")} required/>
+                        <input type="email" className="grow" {...register("email")} required />
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
                         Senha
-                        <input type="password" className="grow" {...register("password")} required/>
+                        <input type="password" className="grow" {...register("password")} required />
                     </label>
                     {user === "estudante" && (
                         <>
                             <div className="flex items-center justify-center gap-4">
                                 <label className="w-56 input input-bordered flex items-center gap-2">
                                     Github
-                                    <input type="text" className="grow w-full" placeholder="/username" {...register("github")} required/>
+                                    <input type="text" className="grow w-full" placeholder="/username" {...register("github")} required />
                                 </label>
                                 <label className="w-56 input input-bordered flex items-center gap-2">
                                     Linkedin
-                                    <input type="text" className="grow w-full" placeholder="/in/name" {...register("linkedin")} required/>
+                                    <input type="text" className="grow w-full" placeholder="/in/name" {...register("linkedin")} required />
                                 </label>
                             </div>
                             <textarea placeholder="Bio" className="textarea textarea-bordered textarea-lg max-w-[465px] min-h-[220px] resize-none" maxLength={200} {...register("description")} required></textarea>

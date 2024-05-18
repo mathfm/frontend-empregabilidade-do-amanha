@@ -37,7 +37,7 @@ export function PerfilEditStudent() {
 
   return (
     <section className="w-full h-screen bg-purple-950 flex flex-col items-center justify-center">
-      <form className="flex flex-col gap-5 w-[650px]" onSubmit={handleSubmit(updateUser)}>
+      <form className="flex flex-col gap-5 md:w-[650px]" onSubmit={handleSubmit(updateUser)}>
         <label className="input input-bordered flex items-center gap-2">
           Nome
           <input type="text" className="grow" {...register("name")} />

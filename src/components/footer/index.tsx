@@ -2,7 +2,7 @@ import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
 
 export function Footer() {
   return (
-    <footer className="footer footer-center text-lg p-10 bg-base-200 text-white rounded bg-black/90">
+    <footer className="footer footer-center text-lg p-10 bg-base-200 text-white bg-black/90">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">Sobre nós</a>
         <a className="link link-hover">Contato</a>

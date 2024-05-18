@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import styles from "./FormsJob.module.css";
 import { JobModel } from "../../models/JobModel";
 
 interface FormsJobProp {
@@ -16,33 +15,17 @@ export function FormsJob({
   const { handleSubmit, register } = useForm<JobModel>();
   
   return (
-    <form className="flex flex-col items-center gap-4 text-white bg-purple-950 p-6 rounded-lg" onSubmit={handleSubmit(functionForms)}>
-      <div className="flex flex-col gap-4">
-        <label className={styles["label-forms"]}>Titulo:</label>
-        <input
-          type="text"
-          className="input input-bordered w-[500px] text-black"
-          {...register("title")}
-        />
-      </div>
-      <div className="flex flex-col gap-4">
-        <label className={styles["label-forms"]}>Descrição:</label>
-        <textarea
-          maxLength={300}
-          className="textarea textarea-bordered textarea-lg w-[500px] h-[300px] resize-none text-black"
-          cols={30}
-          rows={10}
-          {...register("description")}
-        ></textarea>
-      </div>
-      <div className="flex flex-col gap-4">
-        <label className={styles["label-forms"]}>URL:</label>
-        <input
-          type="text"
-          className="input input-bordered w-[500px] text-black"
-          {...register("link_job")}
-        />
-      </div>
+    <form className="flex flex-col items-center gap-12 text-white bg-purple-950 p-6 rounded-lg w-[450px]" onSubmit={handleSubmit(functionForms)}>
+
+      <label className="input input-bordered flex items-center gap-2 w-full text-black">
+        Titulo
+        <input type="text" className="grow" {...register("title")} />
+      </label>
+        <textarea placeholder="Descrição" className="textarea textarea-bordered textarea-lg w-full h-[260px] resize-none text-black" maxLength={200} {...register("description")} required></textarea>
+      <label className="input input-bordered flex items-center gap-2 w-full text-black">
+        Link
+        <input type="text" className="grow" {...register("link_job")} />
+      </label>
       <div className="flex gap-4">
         <button
           type="button"

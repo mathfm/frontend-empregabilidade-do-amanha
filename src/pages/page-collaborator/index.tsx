@@ -50,7 +50,7 @@ export function PageCollaborator() {
 
             <ModalJob idCollaborator={tokenDecode.id} isOpenModal={openModalEdit} setIsOpenModal={setOpenModalEdit} />
             <div className="flex flex-col items-center xl:items-start xl:flex-row gap-4 justify-center max-h-svh">
-                <section className="w-[450px] h-[300px] bg-purple-800 flex items-center justify-center flex-col gap-5 rounded-md text-white">
+                <section className="md:w-[450px] w-[300px] h-[300px] bg-purple-800 flex items-center justify-center flex-col gap-5 rounded-md text-white">
                     <figure className="w-24">
                         <img className="rounded-full" src="/src/assets/img-profile-2.jpg" alt="foto de perfil colaborador" />
                     </figure>
@@ -84,26 +84,3 @@ export function PageCollaborator() {
         </section>
     )
 }
-
-/*
-                {
-                    links.length > 0 && (
-                        links.map((link, i) => {
-                            return (
-                                <div key={i} className={styles["card"]}>
-                                    <CardJob title={"link.title"} description={link.description} link={link.link_job}/>
-                                    <div className={styles["link-card"]}>
-                                        <button className={`${styles["link"]} ${styles["delete"]}`} onClick={() => deleteLink(link.id, collaborator.id)}>Deletar</button>
-                                        <button className={styles["link"]} onClick={() => editLink(link.id)}>Editar</button>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    )
-                    || (
-                        <div className={styles["card"]}>
-                            <p className="text-white text-2xl">Você não possui vagas cadastradas no momento</p>
-                        </div>
-                    )
-                }
-*/

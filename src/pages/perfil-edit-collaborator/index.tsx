@@ -6,6 +6,7 @@ import { JwtTokenModel } from "../../models/JwtTokenModel";
 import { useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import toast from "react-hot-toast";
 
 
 export function PerfilEditCollaborator() {
@@ -38,7 +39,7 @@ export function PerfilEditCollaborator() {
       reset();
       _navigate("/perfil-collaborator");
     } catch (error) {
-      console.log("Erro ao tentar atualizar o colaborador: ", error);
+      toast.error("Ocorreu um erro ao tentar atualizar as informações.");
     }
   };
 
@@ -54,7 +55,7 @@ export function PerfilEditCollaborator() {
 
   return (
     <section className="w-full h-screen bg-purple-900 flex items-center justify-center flex-col">
-      <form className="flex flex-col gap-8 w-[650px] h-[450px] bg-purple-950 p-10 rounded-md" onSubmit={handleSubmit(updateCollaborator)}>
+      <form className="flex flex-col gap-8 md:w-[650px] md:h-[450px] bg-purple-950 p-10 rounded-md" onSubmit={handleSubmit(updateCollaborator)}>
         <label className="input input-bordered flex items-center gap-2">
           Nome
           <input type="text" className="grow" {...register("name")} required />
@@ -68,8 +69,8 @@ export function PerfilEditCollaborator() {
           <input type="password" className="grow" {...register("password")} required />
         </label>
         <div className="flex justify-center gap-4">
-          <button className="btn bg-red-500 border-red-600 font-bold text-lg hover:bg-red-900 hover:text-white w-60" onClick={() => _navigate("/perfil-collaborator")}>Cancelar</button>
-          <button type="submit" className="btn bg-yellow-500 border-yellow-600 font-bold text-lg w-60">Atualizar Cadastro</button>
+          <button className="btn bg-red-500 border-red-600 font-bold text-lg hover:bg-red-900 hover:text-white md:w-60" onClick={() => _navigate("/perfil-collaborator")}>Cancelar</button>
+          <button type="submit" className="btn bg-yellow-500 border-yellow-600 font-bold text-lg md:w-60">Atualizar Cadastro</button>
         </div>
         <button className="btn bg-red-500 border-red-600 font-bold text-lg hover:bg-red-900 hover:text-white" onClick={deleteCollaborator}>Deletar Conta</button>
       </form>
