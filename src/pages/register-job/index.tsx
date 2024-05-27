@@ -1,6 +1,5 @@
 import { FormsJob } from "../../components/forms-job";
 import { jwtDecode } from "jwt-decode";
-import { useForm } from "react-hook-form";
 import { JobModel } from "../../models/JobModel";
 import { JwtTokenModel } from "../../models/JwtTokenModel";
 import { api } from "../../services/apiService";
@@ -9,7 +8,6 @@ import toast from "react-hot-toast";
 
 
 export function RegisterJob() {
-  const { reset } = useForm<JobModel>();
   const _navigate = useNavigate();
   const registerJob = async (data: JobModel) => {
     
@@ -18,7 +16,7 @@ export function RegisterJob() {
     
     try {
       await api.post(`/job/create/${tokenDecode.id}`, data);      
-      reset();
+      _navigate(0);
       toast.success("Sua vaga foi cadastrada com sucesso!");
     } catch (error) {
       toast.error("Ocorreu um erro, não foi possivel registrar a vaga.");

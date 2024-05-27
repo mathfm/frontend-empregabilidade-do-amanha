@@ -58,11 +58,11 @@ export function PerfilEditCollaborator() {
       <form className="flex flex-col gap-8 md:w-[650px] md:h-[450px] bg-purple-950 p-10 rounded-md" onSubmit={handleSubmit(updateCollaborator)}>
         <label className="input input-bordered flex items-center gap-2">
           Nome
-          <input type="text" className="grow" {...register("name")} required />
+          <input type="text" className="grow" {...register("name")} />
         </label>
         <label className="input input-bordered flex items-center gap-2">
           Email
-          <input type="email" className="grow" {...register("email")} required />
+          <input type="email" className="grow" {...register("email")} />
         </label>
         <label className="input input-bordered flex items-center gap-2">
           Senha

@@ -12,6 +12,7 @@ import { PerfilEditCollaborator } from "./pages/perfil-edit-collaborator";
 import { PageStudent } from "./pages/page-student";
 import { PerfilEditStudent } from "./pages/perfil-edit-student";
 import { Toaster } from "react-hot-toast";
+import { PrivateRoutes } from "./pages/utils/PrivateRoutes";
 
 function App() {
   return (
@@ -22,13 +23,16 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/perfil-collaborator" element={<PageCollaborator />} />
-            <Route path="/perfil-colaborador/edit" element={<PerfilEditCollaborator />} />
-            <Route path="/publicar-vaga" element={<RegisterJob /> } />
-            <Route path="/perfil-estudante" element={<PageStudent /> } />
-            <Route path="/perfil-estudante/edit" element={<PerfilEditStudent /> } />
-            <Route path="/estudantes" element={<PageAllStudents />} />
-            <Route path="/vagas" element={<PageAllJobs /> } />
+            <Route path="*" element={<Home /> } />
+            <Route path="" element={<PrivateRoutes />}>
+              <Route path="/perfil-collaborator" element={<PageCollaborator />} />
+              <Route path="/perfil-colaborador/edit" element={<PerfilEditCollaborator />} />
+              <Route path="/publicar-vaga" element={<RegisterJob /> } />
+              <Route path="/perfil-estudante" element={<PageStudent /> } />
+              <Route path="/perfil-estudante/edit" element={<PerfilEditStudent /> } />
+              <Route path="/estudantes" element={<PageAllStudents />} />
+              <Route path="/vagas" element={<PageAllJobs /> } />
+            </Route>
           </Routes>
           <Footer />
         </AuthProvider>

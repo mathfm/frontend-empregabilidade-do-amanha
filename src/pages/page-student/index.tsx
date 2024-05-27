@@ -8,6 +8,9 @@ import { JwtTokenModel } from "../../models/JwtTokenModel";
 import { StudentModel } from "../../models/StudentModel";
 import { ProjectModel } from "../../models/ProjectModel";
 
+
+
+
 export function PageStudent() {
   const [repository, setRepository] = useState<ProjectModel[]>();
   const [user, setUser] = useState<StudentModel>();
@@ -25,7 +28,7 @@ export function PageStudent() {
         );
         const data = await response.data;
         setRepository(data);
-      
+        
     }
 
     if (localStorage.getItem("id_student") !== null) {      
@@ -46,7 +49,14 @@ export function PageStudent() {
       loadRepositories();
     }
 
-  }, []);
+
+
+
+  }, [decodeToken.id, decodeToken.id_student, decodeToken.type]);
+
+  
+  
+  
   
   return (
     <section className="w-full min-h-svh flex flex-col md:flex-row gap-4 items-center justify-center bg-purple-950">
