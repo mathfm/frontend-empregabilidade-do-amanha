@@ -36,35 +36,34 @@ export function PerfilEditStudent() {
 
 
   return (
-    <section className="w-full h-screen bg-purple-950 flex flex-col items-center justify-center">
-      <form className="flex flex-col gap-5 p-3 w-[450px] 2lx:w-[650px] h-full 2xl:h-auto" onSubmit={handleSubmit(updateUser)}>
-        <label className="input input-bordered flex items-center gap-2">
+    <section className="w-full min-h-screen bg-purple-950 flex flex-col items-center justify-center p-4 md:p-8">
+      <form className="flex flex-col gap-5 w-full max-w-md" onSubmit={handleSubmit(updateUser)}>
+        <label className="input input-bordered flex items-center gap-2 bg-black-600">
           Nome
           <input type="text" className="grow" {...register("name")} />
         </label>
-        <label className="input input-bordered flex items-center gap-2">
+        <label className="input input-bordered flex items-center gap-2 bg-black-600">
           Email
           <input type="email" className="grow" {...register("email")} />
         </label>
-        <label className="input input-bordered flex items-center gap-2">
+        <label className="input input-bordered flex items-center gap-2 bg-black-600">
           Senha
           <input type="password" className="grow" {...register("password")} required />
         </label>
-        <label className="input input-bordered flex items-center gap-2">
+        <label className="input input-bordered flex items-center gap-2 bg-black-600">
           Github
-          <input type="text" className="grow w-full" placeholder="/username" {...register("github_url")} />
+          <input type="text" className="grow" placeholder="/username" {...register("github_url")} />
         </label>
-        <label className="input input-bordered flex items-center gap-2">
+        <label className="input input-bordered flex items-center gap-2 bg-black-600">
           Linkedin
-          <input type="text" className="grow w-full" placeholder="/name" {...register("linkedin_url")} />
+          <input type="text" className="grow" placeholder="/name" {...register("linkedin_url")} />
         </label>
-
-      <textarea placeholder="Bio" className="textarea textarea-bordered textarea-lg h-[150px] 2xl:min-h-[220px] resize-none" maxLength={200} {...register("description")}></textarea>
-        <div className="flex justify-center gap-4">
-          <button className="btn text-black w-40 hover:bg-yellow-600 bg-yellow-500 border-yellow-600 font-bold text-lg" onClick={() => _navigate("/perfil-estudante")}>Voltar</button>
-          <button type="submit" className="btn text-black w-40 hover:bg-yellow-600 bg-yellow-500 border-yellow-600 font-bold text-lg">Atualizar</button>
+        <textarea placeholder="Bio" className="textarea textarea-bordered textarea-lg min-h-[220px] resize-none bg-black-600" maxLength={200} {...register("description")}></textarea>
+        <div className="flex flex-col md:flex-row justify-center gap-4">
+          <button className="btn w-full md:w-auto 2xl:w-36 bg-yellow-500 border-yellow-600 font-bold text-lg text-black hover:text-black hover:bg-white" onClick={() => _navigate("/perfil-estudante")}>Voltar</button>
+          <button type="submit" className="btn w-full md:w-auto 2xl:w-36 bg-yellow-500 border-yellow-600 font-bold text-lg text-black hover:text-black hover:bg-white">Atualizar</button>
         </div>
-        <button onClick={deleteStudent} className="btn text-black bg-red-500 border-red-900 font-bold text-lg hover:text-white hover:bg-red-900">Deletar conta</button>
+        <button onClick={deleteStudent} className="btn w-full bg-red-500 border-red-900 font-bold text-lg text-white hover:text-white hover:bg-red-900">Deletar conta</button>
       </form>
     </section>
   );

@@ -59,7 +59,7 @@ export function PageStudent() {
   
   
   return (
-    <section className="w-full min-h-svh flex flex-col md:flex-row gap-4 items-center justify-center bg-purple-950">
+    <section className="w-full min-h-svh flex flex-col xl:flex-row gap-4 items-center justify-center bg-purple-950">
       {
         repository?.length !== undefined && repository.slice(0, 1).map((repo) => {
           return <PerfilStudent

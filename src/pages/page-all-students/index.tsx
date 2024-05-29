@@ -16,7 +16,7 @@ export function PageAllStudents() {
 
     return (
         <section className="w-full h-screen flex items-start bg-purple-900">
-            <div className="flex mt-2 items-center flex-wrap gap-12 lg:justify-start justify-center">
+            <div className="flex mt-2 ml-2 items-center flex-wrap gap-12 lg:justify-start justify-center">
                 {allStudent !== undefined && allStudent.length >= 0 &&  (
                     allStudent.map((student) => 
                         <CardStudent

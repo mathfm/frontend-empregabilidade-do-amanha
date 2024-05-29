@@ -19,7 +19,7 @@ export function PerfilStudent({
   description,
 }: PerfilStudentProp) {
   return (
-    <section className="flex flex-col justify-evenly md:w-[440px] h-[500px] md:h-[690px] text-center rounded-xl p-4 bg-purple-800 items-center text-white">
+    <section className="flex flex-col justify-evenly xl:w-[440px] h-[500px] xl:h-[690px] text-center rounded-xl p-4 bg-purple-800 items-center text-white">
       <figure className="md:w-36 w-32">
         <img src={img} className="w-full rounded-full" alt="" />
       </figure>
