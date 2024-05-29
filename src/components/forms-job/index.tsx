@@ -21,7 +21,7 @@ export function FormsJob({
         Titulo
         <input type="text" className="grow" {...register("title")} />
       </label>
-        <textarea placeholder="Descrição" className="textarea textarea-bordered textarea-lg w-full h-[260px] resize-none text-black bg-white" maxLength={200} {...register("description")} required></textarea>
+        <textarea placeholder="Descrição" className="textarea textarea-bordered textarea-lg w-full h-[260px] resize-none text-black bg-white" maxLength={250} {...register("description")} required></textarea>
       <label className="bg-white input input-bordered flex items-center gap-2 w-full">
         Link
         <input type="text" className="grow" {...register("link_job")} />

@@ -77,7 +77,7 @@ export function ModalSignup({ isOpenSignup, setIsModalSignupOpen, setIsModalLogi
 
     return (
         <dialog className="modal" open={isOpenSignup}>
-            <div className="modal-box h-full 2xl:max-h-[768px] flex flex-col justify-evenly gap-5 bg-purple-950">
+            <div className={`modal-box h-full 2xl:h-[768px] flex flex-col justify-evenly gap-5 bg-purple-950`}>
                 <div className="text-white flex justify-start items-center flex-col gap-5">
                     <h3 className="font-bold text-lg">Se registrar como:</h3>
                     <TypeUser typeUser={user} setTypeUser={setType} />
