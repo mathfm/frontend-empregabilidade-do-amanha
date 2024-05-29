@@ -12,7 +12,6 @@ export function RegisterJob() {
   const registerJob = async (data: JobModel) => {
     
     const tokenDecode = jwtDecode<JwtTokenModel>(localStorage.getItem("token") || "");
-
     
     try {
       await api.post(`/job/create/${tokenDecode.id}`, data);      

@@ -6,19 +6,15 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../../context/AuthContext';
 import toast from "react-hot-toast";
 
-
-
 interface IModalLogin {
     isOpenLogin: boolean;
     setIsModalLoginOpen: (isOpenLogin: boolean) => void;
     setIsModalSignupOpen: (isSignup: boolean) => void;
 }
-
 interface IUserForm {
     email: string;
     password: string;
 }
-
 
 export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupOpen }: IModalLogin) {
     const [user, setUser] = useState<'estudante' | 'colaborador'>('estudante')
@@ -29,8 +25,6 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
     const setType = (type: 'estudante' | 'colaborador') => {
         setUser(type);
     };
-
-
 
     const handleSignup = () => {
         setIsModalLoginOpen(false);
@@ -74,7 +68,6 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
         return null;
     } 
 
-
     const handleLoginUser = async (data: IUserForm) => {
         if (user == "estudante") {
             loginStudent(data);
@@ -86,20 +79,20 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
 
     return (
         <dialog className="modal" open={isOpenLogin}>
-            <div className="modal-box h-[450px] flex flex-col justify-evenly gap-5 bg-purple-950">
+            <div className="modal-box h-[450px] flex flex-col justify-evenly gap-5 bg-purple-950 text-gray">
                 <div className="text-white flex justify-start items-center flex-col gap-5">
                     <h3 className="font-bold text-lg">Deseja fazer login como:</h3>
                     <TypeUser typeUser={user} setTypeUser={setType} />
                 </div>
                 <form className="flex flex-col gap-5" onSubmit={handleSubmit(handleLoginUser)}>
                     <div>
-                        <label className="input input-bordered flex items-center gap-2">
+                        <label className="input input-bordered flex items-center gap-2 bg-black-600">
                             Email
                             <input type="email" className="grow" {...register('email')} />
                         </label>
                     </div>
                     <div>
-                        <label className="input input-bordered flex items-center gap-2">
+                        <label className="input input-bordered flex items-center gap-2 bg-black-600">
                             Senha
                             <input type="password" className="grow" {...register('password')} />
                         </label>

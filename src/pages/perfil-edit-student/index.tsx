@@ -1,5 +1,5 @@
 import { jwtDecode } from "jwt-decode";
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { api } from "../../services/apiService";
@@ -7,21 +7,22 @@ import { JwtTokenModel } from "../../models/JwtTokenModel";
 import { StudentModel } from "../../models/StudentModel";
 import { useNavigate } from "react-router-dom";
 
-
-
-
 export function PerfilEditStudent() {
-  const authContext  = useContext(AuthContext);
+  const authContext = useContext(AuthContext);
   const { register, handleSubmit, reset } = useForm<StudentModel>();
-  const decodeToken = jwtDecode<JwtTokenModel>(localStorage.getItem("token") || "");
+  const decodeToken = jwtDecode<JwtTokenModel>(
+    localStorage.getItem("token") || ""
+  );
   const _navigate = useNavigate();
   const deleteStudent = async () => {
     await api.delete(`/student/delete/${decodeToken.id}`);
     authContext?.logout();
     _navigate("/");
-  }
+  };
   const updateUser = async (data: StudentModel) => {
-    const findUser = await api.get(`/student/${decodeToken.id}`, { headers: { Authorization: "Bearer " + localStorage.getItem("token") } });
+    const findUser = await api.get(`/student/${decodeToken.id}`, {
+      headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+    });
     const formsUpdatedUser = {
       name: data.name || findUser.data.name,
       email: data.email || findUser.data.email,
@@ -33,7 +34,6 @@ export function PerfilEditStudent() {
     await api.put(`/student/update/${decodeToken.id}`, formsUpdatedUser);
     reset();
   };
-
 
   return (
     <section className="w-full min-h-screen bg-purple-950 flex flex-col items-center justify-center p-4 md:p-8">

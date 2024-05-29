@@ -8,8 +8,6 @@ import { JwtTokenModel } from "../../models/JwtTokenModel";
 import { useNavigate } from "react-router-dom";
 import { ModalJob } from "../modal-job";
 
-
-
 // Implementar a conexão com o banco de dados
 export function PageCollaborator() {
     const [collaborator, setCollaborator] = useState<CollaboratorModel>();
@@ -50,7 +48,7 @@ export function PageCollaborator() {
 
             <ModalJob idCollaborator={tokenDecode.id} isOpenModal={openModalEdit} setIsOpenModal={setOpenModalEdit} />
             <div className="flex flex-col items-center xl:items-start xl:flex-row gap-4 justify-center max-h-svh">
-                <section className="md:w-[450px] w-[300px] h-[300px] bg-purple-800 flex items-center justify-center flex-col gap-5 rounded-md text-white">
+                <section className="md:w-[450px] w-[300px] h-[300px] bg-purple-800 flex items-center justify-center flex-col gap-5 rounded-md text-white mt-6">
                     <figure className="w-24">
                         <img className="rounded-full" src="/src/assets/img-profile-2.jpg" alt="foto de perfil colaborador" />
                     </figure>

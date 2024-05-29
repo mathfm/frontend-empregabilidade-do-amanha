@@ -32,7 +32,7 @@ export function PerfilStudent({
       <div className="flex gap-4">
         <Link
           to={`https://github.com/${github_url}`}
-          className="flex flex-col items-center gap-1 text-yellow-500 font-semibold"
+          className="flex flex-col items-center gap-1 text-yellow-500 hover:text-white font-semibold"
           target="_blank"
           rel="nopenner norefferer"
         >
@@ -42,7 +42,7 @@ export function PerfilStudent({
 
         <Link
           to={`https://www.linkedin.com/in/${linkedin_url}/`}
-          className="flex flex-col items-center gap-1 text-yellow-500 font-semibold"
+          className="flex flex-col items-center gap-1 text-yellow-500 hover:text-white font-semibold"
           target="_blank"
           rel="nopenner norefferer"
         >

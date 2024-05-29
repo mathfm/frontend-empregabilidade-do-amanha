@@ -33,7 +33,6 @@ export function ModalSignup({ isOpenSignup, setIsModalSignupOpen, setIsModalLogi
     }
 
     const signupUser = (data: FormData) => {
-
         if (user === 'estudante') {
             api.post("/student/create", {
                 name: data.name,
@@ -77,32 +76,32 @@ export function ModalSignup({ isOpenSignup, setIsModalSignupOpen, setIsModalLogi
 
     return (
         <dialog className="modal" open={isOpenSignup}>
-            <div className={`modal-box h-full 2xl:h-[768px] flex flex-col justify-evenly gap-5 bg-purple-950`}>
+            <div className="modal-box mt-10 flex flex-col justify-between gap-5 bg-purple-950 min-h-[450px] md:max-h-[80vh] lg:max-h-[90vh] overflow-auto">
                 <div className="text-white flex justify-start items-center flex-col gap-5">
                     <h3 className="font-bold text-lg">Se registrar como:</h3>
                     <TypeUser typeUser={user} setTypeUser={setType} />
                 </div>
-                <form className="flex flex-col gap-5" onSubmit={handleSubmit(signupUser)}>
-                    <label className="input input-bordered flex items-center gap-2">
+                <form className="flex flex-col gap-5 px-4 md:px-8 lg:px-12" onSubmit={handleSubmit(signupUser)}>
+                    <label className="input input-bordered flex items-center gap-2 bg-black-600">
                         Nome
                         <input type="text" className="grow" {...register("name")} required />
                     </label>
-                    <label className="input input-bordered flex items-center gap-2">
+                    <label className="input input-bordered flex items-center gap-2 bg-black-600">
                         Email
                         <input type="email" className="grow" {...register("email")} required />
                     </label>
-                    <label className="input input-bordered flex items-center gap-2">
+                    <label className="input input-bordered flex items-center gap-2 bg-black-600">
                         Senha
                         <input type="password" className="grow" {...register("password")} required />
                     </label>
                     {user === "estudante" && (
                         <>
-                            <div className="flex items-center justify-center gap-4">
-                                <label className="w-56 input input-bordered flex items-center gap-2">
+                            <div className="flex flex-col md:flex-row gap-4">
+                                <label className="input input-bordered flex items-center gap-2 md:w-1/2 bg-black-600">
                                     Github
                                     <input type="text" className="grow w-full" placeholder="/username" {...register("github")} required />
                                 </label>
-                                <label className="w-56 input input-bordered flex items-center gap-2">
+                                <label className="input input-bordered flex items-center gap-2 md:w-1/2 bg-black-600">
                                     Linkedin
                                     <input type="text" className="grow w-full" placeholder="/in/name" {...register("linkedin")} required />
                                 </label>
@@ -113,7 +112,7 @@ export function ModalSignup({ isOpenSignup, setIsModalSignupOpen, setIsModalLogi
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-white" onClick={() => setIsModalSignupOpen(!isOpenSignup)}>✕</button>
                     <button type="submit" className="btn bg-yellow-500 text-black border-yellow-600 font-bold text-lg hover:bg-yellow-600">Criar Conta</button>
                 </form>
-                <button className="text-white underline" onClick={handleLogin}>Ja tem uma conta?</button>
+                <button className="text-white underline" onClick={handleLogin}>Já tem uma conta?</button>
             </div>
         </dialog>
     )
