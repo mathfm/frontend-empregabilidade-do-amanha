@@ -19,7 +19,7 @@ export function PerfilStudent({
   description,
 }: PerfilStudentProp) {
   return (
-    <section className="flex flex-col justify-evenly md:w-[440px] h-[500px] md:h-[690px] text-center rounded-xl p-4 bg-purple-800 items-center text-white">
+    <section className="flex flex-col justify-evenly md:w-[440px] h-[500px] md:h-[675px] text-center rounded-xl p-4 bg-purple-800 items-center text-white">
       <figure className="md:w-36 w-32">
         <img src={img} className="w-full rounded-full" alt="" />
       </figure>
@@ -32,7 +32,7 @@ export function PerfilStudent({
       <div className="flex gap-4">
         <Link
           to={`https://github.com/${github_url}`}
-          className="flex flex-col items-center gap-1 text-yellow-500 font-semibold"
+          className="flex flex-col items-center gap-1 text-yellow-500 hover:text-white font-semibold"
           target="_blank"
           rel="nopenner norefferer"
         >
@@ -42,7 +42,7 @@ export function PerfilStudent({
 
         <Link
           to={`https://www.linkedin.com/in/${linkedin_url}/`}
-          className="flex flex-col items-center gap-1 text-yellow-500 font-semibold"
+          className="flex flex-col items-center gap-1 text-yellow-500 hover:text-white font-semibold"
           target="_blank"
           rel="nopenner norefferer"
         >
