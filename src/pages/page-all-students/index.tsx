@@ -15,12 +15,12 @@ export function PageAllStudents() {
     }, []);
 
     return (
-        <section className="w-full min-h-screen flex items-start justify-center bg-purple-900 p-4 lg:p-8">
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-center">
+        <section className="w-full min-h-screen flex items-start justify-start bg-purple-900 p-4 lg:p-8">
+            <div className="flex items-center justify-center 2xl:justify-start flex-wrap gap-2">
                 {allStudent !== undefined && allStudent.length > 0 &&  (
                     allStudent.map((student) => 
                         <CardStudent
-                            img="/src/assets/img-profile.jpg"
+                            img="/src/assets/img-profile-2.jpg"
                             key={student.id}
                             id={student.id || ""}
                             description={student.description}

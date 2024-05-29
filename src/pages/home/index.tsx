@@ -7,7 +7,6 @@ export function Home() {
   const [isModalSignupOpen, setIsModalSignupOpen] = useState(false);
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen bg-img-home bg-cover bg-center">
     <section className="flex items-center justify-center w-full h-screen bg-img-home bg-cover bg-center">
       <ModalLogin
         isOpenLogin={isModalLoginOpen}
