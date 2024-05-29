@@ -69,10 +69,10 @@ export function PerfilEditCollaborator() {
           <input type="password" className="grow" {...register("password")} required />
         </label>
         <div className="flex justify-center gap-4">
-          <button className="btn bg-red-500 border-red-600 font-bold text-lg hover:bg-red-900 hover:text-white md:w-60" onClick={() => _navigate("/perfil-collaborator")}>Cancelar</button>
-          <button type="submit" className="btn bg-yellow-500 border-yellow-600 font-bold text-lg md:w-60">Atualizar Cadastro</button>
+          <button className="btn bg-red-500 border-red-600 font-bold text-lg hover:bg-red-900 hover:text-white md:w-60 text-black" onClick={() => _navigate("/perfil-collaborator")}>Cancelar</button>
+          <button type="submit" className="btn bg-yellow-500 border-yellow-600 font-bold text-lg md:w-60 text-black hover:bg-yellow-600">Atualizar Cadastro</button>
         </div>
-        <button className="btn bg-red-500 border-red-600 font-bold text-lg hover:bg-red-900 hover:text-white" onClick={deleteCollaborator}>Deletar Conta</button>
+        <button className="btn bg-red-500 text-black border-red-600 font-bold text-lg hover:bg-red-900 hover:text-white" onClick={deleteCollaborator}>Deletar Conta</button>
       </form>
     </section>
   );

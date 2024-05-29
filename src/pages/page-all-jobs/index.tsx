@@ -13,7 +13,7 @@ export function PageAllJobs() {
 
   return (
     <section className="w-full min-h-screen flex items-start justify-center bg-purple-950">
-      <div className="flex items-center justify-center flex-wrap gap-12 overflow-y-auto">
+      <div className="flex mt-2                                                             items-center justify-center flex-wrap gap-12 overflow-y-auto">
         {
           job !== undefined ? (
             job.length > 0 ? (

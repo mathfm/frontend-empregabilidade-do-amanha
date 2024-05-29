@@ -58,7 +58,7 @@ export function PageCollaborator() {
                     <p>{collaborator?.email}</p>
                     <p>Total de vagas publicadas: {links?.length}</p>
                 </section>
-                <div className="flex flex-col gap-4 overflow-x-hidden overflow-y-auto min-h-96 max-h-[400px] xl:max-h-[700px] scrollbar scrollbar-thumb-purple-900">
+                <div className="flex flex-col gap-4 overflow-x-hidden overflow-y-auto h-96 max-h-[400px] xl:max-h-[700px] scrollbar scrollbar-thumb-purple-900">
                     {
                         links?.length != null && links.length && (
                             links.map((link, i) => {

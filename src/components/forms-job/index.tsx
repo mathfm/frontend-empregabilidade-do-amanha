@@ -15,14 +15,14 @@ export function FormsJob({
   const { handleSubmit, register } = useForm<JobModel>();
   
   return (
-    <form className="flex flex-col items-center gap-12 text-white bg-purple-950 p-6 rounded-lg w-[450px]" onSubmit={handleSubmit(functionForms)}>
+    <form className="flex flex-col items-center gap-12 text-black bg-purple-950 p-6 rounded-lg w-[450px]" onSubmit={handleSubmit(functionForms)}>
 
-      <label className="input input-bordered flex items-center gap-2 w-full text-black">
+      <label className="input input-bordered flex items-center gap-2 w-full bg-white">
         Titulo
         <input type="text" className="grow" {...register("title")} />
       </label>
-        <textarea placeholder="Descrição" className="textarea textarea-bordered textarea-lg w-full h-[260px] resize-none text-black" maxLength={200} {...register("description")} required></textarea>
-      <label className="input input-bordered flex items-center gap-2 w-full text-black">
+        <textarea placeholder="Descrição" className="textarea textarea-bordered textarea-lg w-full h-[260px] resize-none text-black bg-white" maxLength={200} {...register("description")} required></textarea>
+      <label className="bg-white input input-bordered flex items-center gap-2 w-full">
         Link
         <input type="text" className="grow" {...register("link_job")} />
       </label>
@@ -36,7 +36,7 @@ export function FormsJob({
         </button>
         <button
           type="submit"
-          className="btn w-28 h-7 bg-yellow-500 border-yellow-600 hover:text-black"
+          className="btn w-28 h-7 text-black hover:bg-yellow-600 bg-yellow-500 border-yellow-600 hover:text-black"
         >
           {methodForm}
         </button>

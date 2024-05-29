@@ -104,7 +104,7 @@ export function ModalLogin({ isOpenLogin, setIsModalLoginOpen, setIsModalSignupO
                             <input type="password" className="grow" {...register('password')} />
                         </label>
                     </div>
-                    <button type="submit" className="btn bg-yellow-500 border-yellow-600 font-bold text-lg">
+                    <button type="submit" className="btn bg-yellow-500 border-yellow-600 font-bold text-lg text-black hover:bg-yellow-600">
                         Fazer login
                     </button>
                 </form>

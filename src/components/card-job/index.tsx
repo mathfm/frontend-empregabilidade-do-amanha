@@ -19,8 +19,8 @@ export default function CardJob({ title, description, link, isCollaborator, dele
         {isCollaborator && (
           <>
             <div className="card-actions justify-center gap-8">
-              <button className="btn w-28 bg-red-500 text-white border-red-900" onClick={deleteCard}>Deletar</button>
-              <button className="btn w-28 bg-yellow-500 border-yellow-800" onClick={editCard}>Editar</button>
+              <button className="btn w-28 bg-red-500 hover:bg-red-700 text-white border-red-900" onClick={deleteCard}>Deletar</button>
+              <button className="btn w-28 text-black hover:bg-yellow-600 bg-yellow-500 border-yellow-800" onClick={editCard}>Editar</button>
             </div>
           </>
         )}
