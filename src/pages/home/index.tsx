@@ -24,7 +24,7 @@ export function Home() {
           <span className="text-yellow-500">&lt;/</span> Uma plataforma feita para mostrar o que os alunos
           fizeram ao longo do curso <span className="text-yellow-500">&gt;</span>
         </p>
-        <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-4 w-full lg:w-60">
           <button
             className="btn text-lg text-white bg-purple-900 border-purple-950 hover:bg-purple-950 hover:text-white"
             onClick={() => setIsModalLoginOpen(true)}>
