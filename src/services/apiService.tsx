@@ -1,6 +1,6 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: "http://localhost:3306/api"
+    baseURL: "https://backend-empregabilidade-do-amanha.onrender.com"
 })
 
